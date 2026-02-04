@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en" class="side-nav-enabled">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Team | TechMaa-AI</title>
+    <meta
+      name="description"
+      content="Meet the talented team behind TechMaa-AI's innovative solutions and digital transformation services."
+    />
+
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+  <link rel="stylesheet" href="assets/css/sidebar.css?v=4" />
+  <script src="assets/js/sidebar.js?v=4" defer></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      /* Subtle background dot pattern for a more premium feel */
+      .bg-dots {
+        background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+        background-size: 1.5rem 1.5rem;
+      }
+      .dark .bg-dots {
+        background-image: radial-gradient(#374151 1px, transparent 1px);
+        background-size: 1.5rem 1.5rem;
+      }
+      /* Employee card hover effects */
+      .employee-card {
+        transition: all 0.3s ease;
+      }
+      .employee-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+      /* Skill tag animations */
+      .skill-tag {
+        transition: all 0.2s ease;
+      }
+      .skill-tag:hover {
+        transform: scale(1.05);
+        background-color: #fbbf24;
+        color: #1f2937;
+      }
+      /* Modal styles */
+      .modal {
+        backdrop-filter: blur(8px);
+      }
+      .modal-content {
+        animation: modalSlideIn 0.3s ease-out;
+      }
+      @keyframes modalSlideIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-200">
+    <main>
+      <!-- Hero Section -->
+      <section class="bg-white dark:bg-gray-800 bg-dots py-16 md:py-24">
+        <div class="container mx-auto px-6 text-center">
+          <h1
+            class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-gray-50 leading-tight"
+            data-aos="fade-up"
+          >
+            Meet Our <span class="text-4xl sm:text-5xl font-extrabold tracking-tight drop-shadow-md bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">Expert Team</span>
+          </h1>
+          <p
+            class="text-lg text-gray-700 dark:text-gray-200 mt-6 max-w-3xl mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            We're a diverse team of strategists, engineers, and innovators
+            passionate about delivering transformational outcomes for our
+            clients.
+          </p>
+          <div
+            class="mt-8 flex flex-wrap justify-center gap-4"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <button
+              class="filter-btn bg-yellow-500 text-gray-900 font-semibold py-2 px-6 rounded-lg transition-all duration-300"
+              data-filter="all"
+            >
+              All Team
+            </button>
+            <button
+              class="filter-btn bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 text-gray-700 dark:text-gray-200 font-semibold py-2 px-6 rounded-lg transition-all duration-300"
+              data-filter="leadership"
+            >
+              Leadership
+            </button>
+            <button
+              class="filter-btn bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 text-gray-700 dark:text-gray-200 font-semibold py-2 px-6 rounded-lg transition-all duration-300"
+              data-filter="engineering"
+            >
+              Engineering
+            </button>
+            <button
+              class="filter-btn bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 text-gray-700 dark:text-gray-200 font-semibold py-2 px-6 rounded-lg transition-all duration-300"
+              data-filter="ai-data"
+            >
+              AI & Data
+            </button>
+            <button
+              class="filter-btn bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 text-gray-700 dark:text-gray-200 font-semibold py-2 px-6 rounded-lg transition-all duration-300"
+              data-filter="consulting"
+            >
+              Consulting
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team Grid Section -->
+      <section class="py-16 md:py-24 bg-white dark:bg-gray-800 transition-colors duration-200">
+        <div class="container mx-auto px-6">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+            id="employee-grid"
+          >
+            <!-- Employee Card 1 -->
+            <div
+              class="employee-card bg-white dark:bg-gray-700 p-6 rounded-xl border border-gray-100 dark:border-gray-600 shadow-lg cursor-pointer transition-colors duration-200"
+              data-aos="fade-up"
+              data-category="leadership"
+              data-employee="1"
+            >
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400"
+                  alt="Rajesh Kumar"
+                  class="w-24 h-24 rounded-full object-cover mb-4"
+                />
+                <h3 class="text-xl font-bold text-gray-900 dark:text-gray-50 mb-1">
+                  Rajesh Kumar
+                </h3>
+                <p class="text-yellow-600 dark:text-yellow-400 font-semibold mb-2">CEO & Founder</p>
+                <p class="text-sm text-gray-600 dark:text-gray-200 mb-4">
+                  15+ years driving digital transformation
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >Strategy</span
+                  >
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >Leadership</span
+                  >
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >AI Vision</span
+                  >
+                </div>
+                <div class="flex space-x-3">
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-blue-500 dark:hover:text-blue-400 transition"
+                    ><i class="fab fa-linkedin text-lg"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-blue-400 dark:hover:text-blue-300 transition"
+                    ><i class="fab fa-twitter text-lg"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition"
+                    ><i class="fas fa-envelope text-lg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Employee Card 2 -->
+            <div
+              class="employee-card bg-white dark:bg-gray-700 p-6 rounded-xl border border-gray-100 dark:border-gray-600 shadow-lg cursor-pointer transition-colors duration-200"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-category="ai-data"
+              data-employee="2"
+            >
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=400"
+                  alt="Priya Sharma"
+                  class="w-24 h-24 rounded-full object-cover mb-4"
+                />
+                <h3 class="text-xl font-bold text-gray-900 dark:text-gray-50 mb-1">
+                  Priya Sharma
+                </h3>
+                <p class="text-yellow-600 dark:text-yellow-400 font-semibold mb-2">
+                  Head of AI & Data Science
+                </p>
+                <p class="text-sm text-gray-600 dark:text-gray-200 mb-4">
+                  ML Expert with 12+ years experience
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >Machine Learning</span
+                  >
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >Python</span
+                  >
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >TensorFlow</span
+                  >
+                </div>
+                <div class="flex space-x-3">
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-blue-500 dark:hover:text-blue-400 transition"
+                    ><i class="fab fa-linkedin text-lg"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-purple-500 dark:hover:text-purple-400 transition"
+                    ><i class="fab fa-github text-lg"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition"
+                    ><i class="fas fa-envelope text-lg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Employee Card 3 -->
+            <div
+              class="employee-card bg-white dark:bg-gray-700 p-6 rounded-xl border border-gray-100 dark:border-gray-600 shadow-lg cursor-pointer transition-colors duration-200"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-category="engineering"
+              data-employee="3"
+            >
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=400"
+                  alt="Arjun Singh"
+                  class="w-24 h-24 rounded-full object-cover mb-4"
+                />
+                <h3 class="text-xl font-bold text-gray-900 dark:text-gray-50 mb-1">
+                  Arjun Singh
+                </h3>
+                <p class="text-yellow-600 dark:text-yellow-400 font-semibold mb-2">
+                  Principal Cloud Architect
+                </p>
+                <p class="text-sm text-gray-600 dark:text-gray-200 mb-4">
+                  Cloud infrastructure specialist
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >AWS</span
+                  >
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >Kubernetes</span
+                  >
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >DevOps</span
+                  >
+                </div>
+                <div class="flex space-x-3">
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-blue-500 dark:hover:text-blue-400 transition"
+                    ><i class="fab fa-linkedin text-lg"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-purple-500 dark:hover:text-purple-400 transition"
+                    ><i class="fab fa-github text-lg"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition"
+                    ><i class="fas fa-envelope text-lg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Employee Card 4 -->
+            <div
+              class="employee-card bg-white dark:bg-gray-700 p-6 rounded-xl border border-gray-100 dark:border-gray-600 shadow-lg cursor-pointer transition-colors duration-200"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-category="consulting"
+              data-employee="4"
+            >
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=400"
+                  alt="Sneha Patel"
+                  class="w-24 h-24 rounded-full object-cover mb-4"
+                />
+                <h3 class="text-xl font-bold text-gray-900 dark:text-gray-50 mb-1">
+                  Sneha Patel
+                </h3>
+                <p class="text-yellow-600 dark:text-yellow-400 font-semibold mb-2">
+                  Senior Strategy Consultant
+                </p>
+                <p class="text-sm text-gray-600 dark:text-gray-200 mb-4">
+                  Digital transformation strategist
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >Strategy</span
+                  >
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >Change Mgmt</span
+                  >
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >Analytics</span
+                  >
+                </div>
+                <div class="flex space-x-3">
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-blue-500 dark:hover:text-blue-400 transition"
+                    ><i class="fab fa-linkedin text-lg"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-blue-400 dark:hover:text-blue-300 transition"
+                    ><i class="fab fa-twitter text-lg"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition"
+                    ><i class="fas fa-envelope text-lg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Employee Card 5 -->
+            <div
+              class="employee-card bg-white dark:bg-gray-700 p-6 rounded-xl border border-gray-100 dark:border-gray-600 shadow-lg cursor-pointer transition-colors duration-200"
+              data-aos="fade-up"
+              data-aos-delay="400"
+              data-category="engineering"
+              data-employee="5"
+            >
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="https://images.pexels.com/photos/3778876/pexels-photo-3778876.jpeg?auto=compress&cs=tinysrgb&w=400"
+                  alt="Vikram Joshi"
+                  class="w-24 h-24 rounded-full object-cover mb-4"
+                />
+                <h3 class="text-xl font-bold text-gray-900 dark:text-gray-50 mb-1">
+                  Vikram Joshi
+                </h3>
+                <p class="text-yellow-600 dark:text-yellow-400 font-semibold mb-2">
+                  Lead Full-Stack Developer
+                </p>
+                <p class="text-sm text-gray-600 dark:text-gray-200 mb-4">
+                  Modern web applications expert
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >React</span
+                  >
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >Node.js</span
+                  >
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >GraphQL</span
+                  >
+                </div>
+                <div class="flex space-x-3">
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-blue-500 dark:hover:text-blue-400 transition"
+                    ><i class="fab fa-linkedin text-lg"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-purple-500 dark:hover:text-purple-400 transition"
+                    ><i class="fab fa-github text-lg"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition"
+                    ><i class="fas fa-envelope text-lg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Employee Card 6 -->
+            <div
+              class="employee-card bg-white dark:bg-gray-700 p-6 rounded-xl border border-gray-100 dark:border-gray-600 shadow-lg cursor-pointer transition-colors duration-200"
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-category="ai-data"
+              data-employee="6"
+            >
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="https://images.pexels.com/photos/3862634/pexels-photo-3862634.jpeg?auto=compress&cs=tinysrgb&w=400"
+                  alt="Anita Gupta"
+                  class="w-24 h-24 rounded-full object-cover mb-4"
+                />
+                <h3 class="text-xl font-bold text-gray-900 dark:text-gray-50 mb-1">
+                  Anita Gupta
+                </h3>
+                <p class="text-yellow-600 dark:text-yellow-400 font-semibold mb-2">
+                  Senior Data Engineer
+                </p>
+                <p class="text-sm text-gray-600 dark:text-gray-200 mb-4">
+                  Big data and analytics specialist
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >Spark</span
+                  >
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >Kafka</span
+                  >
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >SQL</span
+                  >
+                </div>
+                <div class="flex space-x-3">
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-blue-500 dark:hover:text-blue-400 transition"
+                    ><i class="fab fa-linkedin text-lg"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-purple-500 dark:hover:text-purple-400 transition"
+                    ><i class="fab fa-github text-lg"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition"
+                    ><i class="fas fa-envelope text-lg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Employee Card 7 -->
+            <div
+              class="employee-card bg-white dark:bg-gray-700 p-6 rounded-xl border border-gray-100 dark:border-gray-600 shadow-lg cursor-pointer transition-colors duration-200"
+              data-aos="fade-up"
+              data-aos-delay="600"
+              data-category="leadership"
+              data-employee="7"
+            >
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="https://images.pexels.com/photos/3760069/pexels-photo-3760069.jpeg?auto=compress&cs=tinysrgb&w=400"
+                  alt="Rohit Mehta"
+                  class="w-24 h-24 rounded-full object-cover mb-4"
+                />
+                <h3 class="text-xl font-bold text-gray-900 dark:text-gray-50 mb-1">
+                  Rohit Mehta
+                </h3>
+                <p class="text-yellow-600 dark:text-yellow-400 font-semibold mb-2">
+                  VP of Operations
+                </p>
+                <p class="text-sm text-gray-600 dark:text-gray-200 mb-4">
+                  Scaling teams and processes
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >Operations</span
+                  >
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >Team Building</span
+                  >
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >Process</span
+                  >
+                </div>
+                <div class="flex space-x-3">
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-blue-500 dark:hover:text-blue-400 transition"
+                    ><i class="fab fa-linkedin text-lg"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-blue-400 dark:hover:text-blue-300 transition"
+                    ><i class="fab fa-twitter text-lg"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition"
+                    ><i class="fas fa-envelope text-lg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Employee Card 8 -->
+            <div
+              class="employee-card bg-white dark:bg-gray-700 p-6 rounded-xl border border-gray-100 dark:border-gray-600 shadow-lg cursor-pointer transition-colors duration-200"
+              data-aos="fade-up"
+              data-aos-delay="700"
+              data-category="engineering"
+              data-employee="8"
+            >
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="https://images.pexels.com/photos/3777931/pexels-photo-3777931.jpeg?auto=compress&cs=tinysrgb&w=400"
+                  alt="Kavya Rao"
+                  class="w-24 h-24 rounded-full object-cover mb-4"
+                />
+                <h3 class="text-xl font-bold text-gray-900 dark:text-gray-50 mb-1">Kavya Rao</h3>
+                <p class="text-yellow-600 dark:text-yellow-400 font-semibold mb-2">
+                  DevOps Engineer
+                </p>
+                <p class="text-sm text-gray-600 dark:text-gray-200 mb-4">
+                  CI/CD and automation expert
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >Docker</span
+                  >
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >Jenkins</span
+                  >
+                  <span
+                    class="skill-tag text-xs bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
+                    >Terraform</span
+                  >
+                </div>
+                <div class="flex space-x-3">
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-blue-500 dark:hover:text-blue-400 transition"
+                    ><i class="fab fa-linkedin text-lg"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-purple-500 dark:hover:text-purple-400 transition"
+                    ><i class="fab fa-github text-lg"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition"
+                    ><i class="fas fa-envelope text-lg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+            data-aos="fade-up"
+          >
+            <div>
+              <div
+                class="text-4xl font-bold text-yellow-400 dark:text-yellow-300 mb-2"
+                data-count="50"
+              >
+                0
+              </div>
+              <p class="text-gray-300 dark:text-gray-200">Team Members</p>
+            </div>
+            <div>
+              <div
+                class="text-4xl font-bold text-yellow-400 dark:text-yellow-300 mb-2"
+                data-count="15"
+              >
+                0
+              </div>
+              <p class="text-gray-300 dark:text-gray-200">Years Experience</p>
+            </div>
+            <div>
+              <div
+                class="text-4xl font-bold text-yellow-400 dark:text-yellow-300 mb-2"
+                data-count="100"
+              >
+                0
+              </div>
+              <p class="text-gray-300 dark:text-gray-200">Projects Delivered</p>
+            </div>
+            <div>
+              <div
+                class="text-4xl font-bold text-yellow-400 dark:text-yellow-300 mb-2"
+                data-count="25"
+              >
+                0
+              </div>
+              <p class="text-gray-300 dark:text-gray-200">Countries Served</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-16 md:py-24">
+        <div class="container mx-auto px-6" data-aos="fade-up">
+          <div
+            class="bg-blue-200/50 border border-yellow-100 rounded-2xl p-8 md:p-12 text-center max-w-4xl mx-auto"
+          >
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-gray-50 mb-4">
+              Want to Join Our Team?
+            </h2>
+            <p class="text-lg text-gray-700 dark:text-gray-200 mb-8">
+              We're always looking for talented individuals who share our
+              passion for innovation and excellence.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="careers.html"
+                class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                >View Open Positions</a
+              >
+              <a
+                href="contact.html"
+                class="bg-gray-800 hover:bg-black text-white font-bold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                >Get in Touch</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Employee Detail Modal -->
+    <div
+      id="employee-modal"
+      class="modal fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center p-4"
+    >
+      <div
+        class="modal-content bg-white dark:bg-gray-700 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+      >
+        <div class="p-8">
+          <div class="flex justify-between items-start mb-6">
+            <div class="flex items-center space-x-4">
+              <img
+                id="modal-photo"
+                src=""
+                alt=""
+                class="w-20 h-20 rounded-full object-cover"
+              />
+              <div>
+                <h2
+                  id="modal-name"
+                  class="text-2xl font-bold text-gray-900"
+                ></h2>
+                <p
+                  id="modal-role"
+                  class="text-yellow-600 font-semibold text-lg"
+                ></p>
+              </div>
+            </div>
+            <button
+              id="close-modal"
+              class="text-gray-400 hover:text-gray-600 dark:text-gray-200 transition"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-50 mb-3">About</h3>
+              <p id="modal-bio" class="text-gray-700 dark:text-gray-200 leading-relaxed"></p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-50 mb-3">
+                Skills & Expertise
+              </h3>
+              <div id="modal-skills" class="flex flex-wrap gap-2"></div>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-50 mb-3">
+                Experience
+              </h3>
+              <p id="modal-experience" class="text-gray-700 dark:text-gray-200"></p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-50 mb-3">
+                Education
+              </h3>
+              <p id="modal-education" class="text-gray-700 dark:text-gray-200"></p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-50 mb-3">Connect</h3>
+              <div id="modal-social" class="flex space-x-4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-black text-white">
+      <div class="container mx-auto px-6 pt-16 pb-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="col-span-1">
+             <a href="index.html">
+                <img src="assets/img/new-techmaa-logo.png" alt="TechMaa-AI Logo" class="w-28 h-auto mb-6" />
+             </a>
+            <p class="text-gray-400 text-sm">
+              Consulting & IT services to help you ship faster—with confidence.
+            </p>
+            <div class="mt-6 flex space-x-5">
+                <a href="#" aria-label="LinkedIn" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="#" aria-label="GitHub" class="text-gray-400 hover:text-white transition"><i class="fab fa-github fa-lg"></i></a>
+            </div>
+          </div>
+          <nav>
+            <h5 class="font-bold text-gray-200 mb-4">Company</h5>
+            <ul class="space-y-3">
+              <li><a href="services.html" class="text-gray-400 hover:text-cyan-400 transition">Services</a></li>
+              <li><a href="careers.html" class="text-gray-400 hover:text-cyan-400 transition">Careers</a></li>
+              <li><a href="contact.html" class="text-gray-400 hover:text-cyan-400 transition">Contact Us</a></li>
+            </ul>
+          </nav>
+          <nav>
+            <h5 class="font-bold text-gray-200 mb-4">Resources</h5>
+            <ul class="space-y-3">
+              <li><a href="insights.html" class="text-gray-400 hover:text-cyan-400 transition">Insights</a></li>
+              <li><a href="privacy.html" class="text-gray-400 hover:text-cyan-400 transition">Privacy Policy</a></li>
+              <li><a href="terms.html" class="text-gray-400 hover:text-cyan-400 transition">Terms of Service</a></li>
+              <li><a href="blog.html" class="text-gray-400 hover:text-cyan-400 transition">Blog</a></li>
+              <li><a href="about.html" class="text-gray-400 hover:text-cyan-400 transition">About Us</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h5 class="font-bold text-gray-200 mb-4">Get in touch</h5>
+             <ul class="space-y-3">
+                 <li><a href="mailto:hello@techmaa-ai.com" class="text-gray-400 hover:text-cyan-400 transition">hello@techmaa-ai.com</a></li>
+                 </ul>
+          </div>
+        </div>
+        <div
+          class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 dark:text-gray-300"
+        >
+          <small
+            >&copy; <span id="year"></span> TechMaa-AI. All rights
+            reserved.</small
+          >
+
+          <p class="text-sm mt-4">
+            Please note: This is a demonstration website created as a generative
+            AI response. The official website for the company referenced is
+            <a
+              href="https://techmaa.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline text-gray-400 hover:text-cyan-500 transition"
+              >TechMaa | Enterprise IT Solutions & Digital Transformation</a
+            >.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/theme.js?v=3"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Initialize AOS
+        AOS.init({ duration: 800, once: true, offset: 50 });
+
+        // Employee data
+        const employees = {
+          1: {
+            name: "Rajesh Kumar",
+            role: "CEO & Founder",
+            photo:
+              "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400",
+            bio: "Rajesh is a visionary leader with over 15 years of experience in digital transformation and AI strategy. He founded TechMaa-AI with the mission to help organizations harness the power of technology for sustainable growth. His expertise spans across strategic planning, technology adoption, and building high-performing teams.",
+            skills: [
+              "Strategic Planning",
+              "Digital Transformation",
+              "AI Strategy",
+              "Leadership",
+              "Business Development",
+              "Innovation Management",
+            ],
+            experience:
+              "15+ years in technology leadership roles, previously served as VP of Technology at Fortune 500 companies, led multiple successful digital transformation initiatives.",
+            education:
+              "MBA in Technology Management from IIM Bangalore, B.Tech in Computer Science from IIT Delhi",
+            social: {
+              linkedin: "#",
+              twitter: "#",
+              email: "rajesh@techmaa-ai.com",
+            },
+          },
+          2: {
+            name: "Priya Sharma",
+            role: "Head of AI & Data Science",
+            photo:
+              "https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=400",
+            bio: "Priya is a renowned AI expert with a passion for developing cutting-edge machine learning solutions. She leads our AI research and development efforts, ensuring we stay at the forefront of technological innovation. Her work has been published in top-tier conferences and journals.",
+            skills: [
+              "Machine Learning",
+              "Deep Learning",
+              "Python",
+              "TensorFlow",
+              "PyTorch",
+              "Data Science",
+              "NLP",
+              "Computer Vision",
+            ],
+            experience:
+              "12+ years in AI/ML development, former Principal Data Scientist at tech unicorns, holds 8 patents in AI technologies.",
+            education:
+              "PhD in Machine Learning from Stanford University, M.Tech in AI from IIT Bombay",
+            social: {
+              linkedin: "#",
+              github: "#",
+              email: "Priya@techmaa-ai.com",
+            },
+          },
+          3: {
+            name: "Arjun",
+            role: "Principal Cloud Architect",
+            photo:
+              "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=400",
+            bio: "Arjun is our cloud infrastructure guru with deep expertise in designing scalable, secure, and cost-effective cloud solutions. He has architected systems that serve millions of users and has helped numerous organizations migrate to the cloud successfully.",
+            skills: [
+              "AWS",
+              "Azure",
+              "GCP",
+              "Kubernetes",
+              "Docker",
+              "Terraform",
+              "DevOps",
+              "Microservices",
+              "Security",
+            ],
+            experience:
+              "10+ years in cloud architecture, AWS Certified Solutions Architect Professional, designed systems handling 100M+ requests daily.",
+            education:
+              "M.Tech in Distributed Systems from IIT Kanpur, B.Tech in Computer Science",
+            social: {
+              linkedin: "#",
+              github: "#",
+              email: "Arjun@techmaa-ai.com",
+            },
+          },
+          4: {
+            name: "Sneha Singh",
+            role: "Senior Strategy Consultant",
+            photo:
+              "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=400",
+            bio: "Sneha brings a unique blend of business acumen and technical expertise to help organizations navigate their digital transformation journey. She specializes in change management and has successfully led transformation initiatives across various industries.",
+            skills: [
+              "Strategic Consulting",
+              "Change Management",
+              "Business Analysis",
+              "Process Optimization",
+              "Stakeholder Management",
+              "Analytics",
+            ],
+            experience:
+              "8+ years in management consulting, former consultant at top-tier strategy firms, led 50+ transformation projects.",
+            education:
+              "MBA from Wharton School, B.Tech in Industrial Engineering from NIT Trichy",
+            social: {
+              linkedin: "#",
+              twitter: "#",
+              email: "sneha@techmaa-ai.com",
+            },
+          },
+          5: {
+            name: "Vikram Joshi",
+            role: "Lead Full-Stack Developer",
+            photo:
+              "https://images.pexels.com/photos/3778876/pexels-photo-3778876.jpeg?auto=compress&cs=tinysrgb&w=400",
+            bio: "Vikram is a passionate full-stack developer who loves building beautiful, performant web applications. He leads our frontend development team and ensures our applications provide exceptional user experiences while maintaining high code quality standards.",
+            skills: [
+              "React",
+              "Node.js",
+              "TypeScript",
+              "GraphQL",
+              "MongoDB",
+              "PostgreSQL",
+              "Next.js",
+              "Vue.js",
+              "AWS",
+            ],
+            experience:
+              "7+ years in full-stack development, contributed to open-source projects with 10K+ stars, built applications serving 1M+ users.",
+            education:
+              "B.Tech in Computer Science from BITS Pilani, Full Stack Web Development Nanodegree",
+            social: {
+              linkedin: "#",
+              github: "#",
+              email: "vikram@techmaa-ai.com",
+            },
+          },
+          6: {
+            name: "Anita Gupta",
+            role: "Senior Data Engineer",
+            photo:
+              "https://images.pexels.com/photos/3862634/pexels-photo-3862634.jpeg?auto=compress&cs=tinysrgb&w=400",
+            bio: "Anita specializes in building robust data pipelines and infrastructure that enable data-driven decision making. She has extensive experience with big data technologies and has architected data platforms processing terabytes of data daily.",
+            skills: [
+              "Apache Spark",
+              "Kafka",
+              "Hadoop",
+              "Python",
+              "SQL",
+              "Airflow",
+              "Databricks",
+              "Snowflake",
+              "ETL/ELT",
+            ],
+            experience:
+              "9+ years in data engineering, built data platforms processing 10TB+ daily, expertise in real-time data streaming.",
+            education:
+              "M.Tech in Data Science from ISI Kolkata, B.Tech in Mathematics and Computing from IIT Guwahati",
+            social: {
+              linkedin: "#",
+              github: "#",
+              email: "anita@techmaa-ai.com",
+            },
+          },
+          7: {
+            name: "Rohit Mehta",
+            role: "VP of Operations",
+            photo:
+              "https://images.pexels.com/photos/3760069/pexels-photo-3760069.jpeg?auto=compress&cs=tinysrgb&w=400",
+            bio: "Rohit ensures smooth operations across all our projects and teams. With his extensive experience in scaling technology organizations, he focuses on building efficient processes, fostering team collaboration, and maintaining high delivery standards.",
+            skills: [
+              "Operations Management",
+              "Team Leadership",
+              "Process Optimization",
+              "Agile Methodologies",
+              "Project Management",
+              "Quality Assurance",
+            ],
+            experience:
+              "11+ years in operations and team leadership, scaled teams from 10 to 200+ members, implemented processes improving efficiency by 40%.",
+            education:
+              "MBA in Operations from ISB Hyderabad, B.E. in Mechanical Engineering from Delhi College of Engineering",
+            social: {
+              linkedin: "#",
+              twitter: "#",
+              email: "rohit@techmaa-ai.com",
+            },
+          },
+          8: {
+            name: "Kavya Rao",
+            role: "DevOps Engineer",
+            photo:
+              "https://images.pexels.com/photos/3777931/pexels-photo-3777931.jpeg?auto=compress&cs=tinysrgb&w=400",
+            bio: "Kavya is passionate about automation and continuous improvement. She designs and implements CI/CD pipelines, manages infrastructure as code, and ensures our development teams can ship code quickly and reliably.",
+            skills: [
+              "Docker",
+              "Kubernetes",
+              "Jenkins",
+              "Terraform",
+              "Ansible",
+              "AWS",
+              "Monitoring",
+              "CI/CD",
+              "Infrastructure as Code",
+            ],
+            experience:
+              "6+ years in DevOps and infrastructure, reduced deployment time by 80%, managed infrastructure serving millions of requests.",
+            education:
+              "B.Tech in Information Technology from VIT University, AWS Certified DevOps Engineer",
+            social: {
+              linkedin: "#",
+              github: "#",
+              email: "kavya@techmaa-ai.com",
+            },
+          },
+        };
+
+        // Filter functionality
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        const employeeCards = document.querySelectorAll(".employee-card");
+
+        filterBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const filter = btn.getAttribute("data-filter");
+
+            // Update button styles
+            filterBtns.forEach((b) => {
+              b.classList.remove("bg-yellow-500", "text-gray-900");
+              b.classList.add(
+                "bg-gray-200",
+                "dark:bg-gray-600",
+                "hover:bg-gray-300",
+                "text-gray-700",
+                "dark:text-gray-200"
+              );
+            });
+            btn.classList.remove(
+              "bg-gray-200",
+              "dark:bg-gray-600",
+              "hover:bg-gray-300",
+              "text-gray-700",
+              "dark:text-gray-200"
+            );
+            btn.classList.add("bg-yellow-500", "text-gray-900");
+
+            // Filter cards
+            employeeCards.forEach((card) => {
+              const category = card.getAttribute("data-category");
+              if (filter === "all" || category === filter) {
+                card.style.display = "block";
+                card.classList.add("fade-in");
+              } else {
+                card.style.display = "none";
+                card.classList.remove("fade-in");
+              }
+            });
+          });
+        });
+
+        // Modal functionality
+        const modal = document.getElementById("employee-modal");
+        const closeModal = document.getElementById("close-modal");
+
+        employeeCards.forEach((card) => {
+          card.addEventListener("click", () => {
+            const employeeId = card.getAttribute("data-employee");
+            const employee = employees[employeeId];
+
+            if (employee) {
+              // Populate modal
+              document.getElementById("modal-photo").src = employee.photo;
+              document.getElementById("modal-photo").alt = employee.name;
+              document.getElementById("modal-name").textContent = employee.name;
+              document.getElementById("modal-role").textContent = employee.role;
+              document.getElementById("modal-bio").textContent = employee.bio;
+              document.getElementById("modal-experience").textContent =
+                employee.experience;
+              document.getElementById("modal-education").textContent =
+                employee.education;
+
+              // Skills
+              const skillsContainer = document.getElementById("modal-skills");
+              skillsContainer.innerHTML = "";
+              employee.skills.forEach((skill) => {
+                const skillTag = document.createElement("span");
+                skillTag.className =
+                  "bg-yellow-100 text-yellow-800 text-sm px-3 py-1 rounded-full";
+                skillTag.textContent = skill;
+                skillsContainer.appendChild(skillTag);
+              });
+
+              // Social links
+              const socialContainer = document.getElementById("modal-social");
+              socialContainer.innerHTML = "";
+              Object.entries(employee.social).forEach(([platform, url]) => {
+                const link = document.createElement("a");
+                link.href = url;
+                link.className =
+                  "text-gray-400 hover:text-yellow-500 transition text-xl";
+
+                let iconClass = "";
+                switch (platform) {
+                  case "linkedin":
+                    iconClass = "fab fa-linkedin";
+                    break;
+                  case "twitter":
+                    iconClass = "fab fa-twitter";
+                    break;
+                  case "github":
+                    iconClass = "fab fa-github";
+                    break;
+                  case "email":
+                    iconClass = "fas fa-envelope";
+                    break;
+                }
+
+                link.innerHTML = `<i class="${iconClass}"></i>`;
+                socialContainer.appendChild(link);
+              });
+
+              modal.classList.remove("hidden");
+              document.body.classList.add("overflow-hidden");
+            }
+          });
+        });
+
+        // Close modal
+        closeModal.addEventListener("click", () => {
+          modal.classList.add("hidden");
+          document.body.classList.remove("overflow-hidden");
+        });
+
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.classList.add("hidden");
+            document.body.classList.remove("overflow-hidden");
+          }
+        });
+
+        // Stats counter animation
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const counters = entry.target.querySelectorAll("[data-count]");
+                counters.forEach((counter) => {
+                  const target = +counter.getAttribute("data-count");
+                  let count = 0;
+                  const speed = 200;
+                  const increment = target / speed;
+                  const updateCount = () => {
+                    if (count < target) {
+                      count += increment;
+                      counter.innerText = Math.ceil(count);
+                      setTimeout(updateCount, 1);
+                    } else {
+                      counter.innerText = target;
+                    }
+                  };
+                  updateCount();
+                });
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+
+        const statsSection = document.querySelector(".bg-gray-900");
+        if (statsSection) {
+          observer.observe(statsSection);
+        }
+
+        // Header scroll effect
+        const header = document.getElementById("main-header");
+        window.addEventListener("scroll", () => {
+          header.classList.toggle("bg-black/95", window.scrollY > 10);
+          header.classList.toggle("bg-black/80", window.scrollY <= 10);
+        });
+
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const closeMobileMenuButton =
+          document.getElementById("close-mobile-menu");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const mobileMenuOverlay = document.getElementById(
+          "mobile-menu-overlay"
+        );
+
+        const toggleMobileMenu = () => {
+          const isOpen = mobileMenu.classList.contains("translate-x-full");
+          mobileMenu.classList.toggle("translate-x-full", !isOpen);
+          mobileMenuOverlay.classList.toggle("hidden", !isOpen);
+          document.body.classList.toggle("overflow-hidden", isOpen);
+        };
+
+        mobileMenuButton.addEventListener("click", toggleMobileMenu);
+        if (closeMobileMenuButton)
+          closeMobileMenuButton.addEventListener("click", toggleMobileMenu);
+        mobileMenuOverlay.addEventListener("click", toggleMobileMenu);
+
+        // Set current year
+        document.getElementById("year").textContent = new Date().getFullYear();
+      });
+    </script>
+  </body>
+</html>

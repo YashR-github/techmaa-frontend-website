@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en" class="side-nav-enabled">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechMaa-AI | Consulting & IT Services</title>
+    <meta
+      name="description"
+      content="TechMaa-AI delivers strategy, technology, and AI-driven transformation services."
+    />
+
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/sidebar.css?v=4" />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      /* Subtle background dot pattern for a more premium feel */
+      .bg-dots {
+        background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+        background-size: 1.5rem 1.5rem;
+      }
+      .dark .bg-dots {
+        background-image: radial-gradient(#374151 1px, transparent 1px);
+        background-size: 1.5rem 1.5rem;
+      }
+      /* Custom styles for the Swiper pagination and navigation to match new theme */
+      .swiper-pagination-bullet-active {
+        background-color: #0891b2 !important; /* Tailwind cyan-600 */
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #0891b2 !important; /* Tailwind cyan-600 */
+        transition: transform 0.2s ease-in-out;
+      }
+      .swiper-button-next:hover,
+      .swiper-button-prev:hover {
+        transform: scale(1.1);
+      }
+      logoTechmaa {
+        width: 50px;
+        height: 10px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      /* Trusted logos marquee */
+      .trusted-marquee {
+        overflow: hidden;
+        /* soften edges */
+        -webkit-mask-image: linear-gradient(
+          90deg,
+          transparent,
+          #000 8%,
+          #000 92%,
+          transparent
+        );
+        mask-image: linear-gradient(
+          90deg,
+          transparent,
+          #000 8%,
+          #000 92%,
+          transparent
+        );
+      }
+      .trusted-marquee__track {
+        display: flex;
+        width: max-content;
+        will-change: transform;
+        animation: trusted-marquee 28s linear infinite;
+      }
+      .trusted-marquee:hover .trusted-marquee__track {
+        animation-play-state: paused;
+      }
+      .trusted-marquee__set {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        padding-right: 3rem;
+      }
+      @keyframes trusted-marquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .trusted-marquee {
+          -webkit-mask-image: none;
+          mask-image: none;
+        }
+        .trusted-marquee__track {
+          animation: none;
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-200">
+    <div class="home-top-logo">
+      <a href="index.html" class="flex items-center gap-3" aria-label="TechMaa-AI Home">
+        <img src="assets/img/Logo.jpeg" alt="TechMaa-AI Logo" class="home-logo-img" />
+        <span>TechMaa-AI</span>
+      </a>
+    </div>
+
+    <main>
+      <section class="relative transition-colors duration-200" style="background-image: url('assets/img/techmaa-homepage.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 450px; padding-top: 80px;">
+        <div
+          class="container mx-auto px-6 py-12 md:py-16 flex items-center"
+        >
+          <div class="text-center md:text-left max-w-2xl" data-aos="fade-right">
+            <h1
+              class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight"
+            >
+              Build what’s next with
+              <span
+                class="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent"
+                id="typed-element"
+              ></span>
+            </h1>
+            <p class="text-lg text-gray-300 font-medium mt-6 max-w-xl mx-auto md:mx-0" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);">
+              We partner with enterprises and startups to deliver measurable
+              outcomes through cloud, data, and AI-led transformation.
+            </p>
+            <div
+              class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+            >
+              <a
+                href="services.html"
+                class="bg-blue-400 hover:bg-blue-500 text-gray-900 font-bold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                >Explore Services</a
+              >
+              <a
+                href="testimonials.html"
+                class="bg-white hover:bg-gray-100 text-gray-900 font-bold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border-2 border-gray-200"
+                >See Our Work</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-14 md:py-16 bg-white dark:bg-gray-800 border-y border-gray-100 dark:border-gray-700 transition-colors duration-200">
+        <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+          <p class="text-sm font-semibold tracking-wider uppercase text-gray-500 dark:text-gray-300">
+            TRUSTED BY INNOVATIVE COMPANIES WORLDWIDE
+          </p>
+          <div class="mt-10 trusted-marquee">
+            <div class="trusted-marquee__track">
+              <!-- Set 1 -->
+              <div class="trusted-marquee__set" aria-label="Trusted company logos (scrolling)">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png"
+                  alt="Amazon"
+                  loading="lazy"
+                  class="h-7 sm:h-8 w-auto opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300"
+                />
+                <img
+                  src="https://cdn.worldvectorlogo.com/logos/microsoft-5.svg"
+                  alt="Microsoft"
+                  loading="lazy"
+                  class="h-7 sm:h-8 w-auto opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300"
+                />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
+                  alt="Google"
+                  loading="lazy"
+                  class="h-7 sm:h-8 w-auto opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300"
+                />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/505px-Apple_logo_black.svg.png"
+                  alt="Apple"
+                  loading="lazy"
+                  class="h-7 sm:h-8 w-auto opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300 dark:invert"
+                />
+                <img
+                  src="https://cdn.worldvectorlogo.com/logos/samsung-2.svg"
+                  alt="Samsung"
+                  loading="lazy"
+                  class="h-7 sm:h-8 w-auto opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300"
+                />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png"
+                  alt="React"
+                  loading="lazy"
+                  class="h-7 sm:h-8 w-auto opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300"
+                />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png"
+                  alt="Laravel"
+                  loading="lazy"
+                  class="h-7 sm:h-8 w-auto opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300"
+                />
+              </div>
+
+              <!-- Set 2 (duplicate for seamless loop) -->
+              <div class="trusted-marquee__set" aria-hidden="true">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png"
+                  alt=""
+                  loading="lazy"
+                  class="h-7 sm:h-8 w-auto opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300"
+                />
+                <img
+                  src="https://cdn.worldvectorlogo.com/logos/microsoft-5.svg"
+                  alt=""
+                  loading="lazy"
+                  class="h-7 sm:h-8 w-auto opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300"
+                />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
+                  alt=""
+                  loading="lazy"
+                  class="h-7 sm:h-8 w-auto opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300"
+                />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/505px-Apple_logo_black.svg.png"
+                  alt=""
+                  loading="lazy"
+                  class="h-7 sm:h-8 w-auto opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300 dark:invert"
+                />
+                <img
+                  src="https://cdn.worldvectorlogo.com/logos/samsung-2.svg"
+                  alt=""
+                  loading="lazy"
+                  class="h-7 sm:h-8 w-auto opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300"
+                />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png"
+                  alt=""
+                  loading="lazy"
+                  class="h-7 sm:h-8 w-auto opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300"
+                />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png"
+                  alt=""
+                  loading="lazy"
+                  class="h-7 sm:h-8 w-auto opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 md:py-24 bg-white dark:bg-gray-800 bg-dots transition-colors duration-200">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12 max-w-3xl mx-auto" data-aos="fade-up">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-50">
+              End-to-End Digital Transformation
+            </h2>
+            <p class="text-lg text-gray-700 dark:text-gray-200 mt-4">
+              From strategy to execution, we provide the expertise you need to
+              innovate and scale.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="bg-white dark:bg-gray-700 p-8 rounded-xl border border-gray-100 dark:border-gray-600 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="text-3xl text-cyan-500 dark:text-cyan-400 mb-4">
+                <i class="fas fa-compass"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-50 mb-3">
+                Strategy & Advisory
+              </h3>
+              <p class="text-gray-600 dark:text-gray-200 mb-4">
+                From vision to roadmap—target operating models, AI adoption, and
+                value realization.
+              </p>
+              <a
+                href="services.html"
+                class="font-semibold text-blue-600 hover:text-blue-700 transition"
+                >Learn more →</a
+              >
+            </div>
+            <div
+              class="bg-white dark:bg-gray-700 p-8 rounded-xl border border-gray-100 dark:border-gray-600 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="text-3xl text-cyan-500 dark:text-cyan-400 mb-4">
+                <i class="fas fa-cloud"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-50 mb-3">
+                Engineering & Cloud
+              </h3>
+              <p class="text-gray-600 dark:text-gray-200 mb-4">
+                Modernize platforms with microservices, Kubernetes, and
+                serverless on AWS, GCP, and Azure.
+              </p>
+              <a
+                href="services.html"
+                class="font-semibold text-blue-600 hover:text-blue-700 transition"
+                >Learn more →</a
+              >
+            </div>
+            <div
+              class="bg-white dark:bg-gray-700 p-8 rounded-xl border border-gray-100 dark:border-gray-600 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="text-3xl text-cyan-500 dark:text-cyan-400 mb-4">
+                <i class="fas fa-brain"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-50 mb-3">
+                Data & GenAI
+              </h3>
+              <p class="text-gray-600 dark:text-gray-200 mb-4">
+                Data platforms, MLOps, and safe Generative AI copilots tailored
+                to your business.
+              </p>
+              <a
+                href="services.html"
+                class="font-semibold text-blue-600 hover:text-blue-700 transition"
+                >Learn more →</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="py-16 md:py-24 bg-gray-200 dark:bg-gray-700 text-black dark:text-gray-100 transition-colors duration-200"
+        id="outcomes-section"
+      >
+        <div
+          class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+        >
+          <div data-aos="fade-right">
+            <h2 class="text-3xl sm:text-4xl font-bold">
+              Outcome-first. Not hype-first.
+            </h2>
+            <p class="text-lg text-gray-900 dark:text-gray-200 mt-4">
+              We measure our success by the tangible business outcomes we
+              deliver—revenue lift, cost savings, and risk reduction.
+            </p>
+            <a
+              href="testimonials.html"
+              class="mt-6 inline-block bg-blue-400 hover:bg-blue-500 text-gray-900 font-bold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+              >Browse Client Stories</a
+            >
+          </div>
+          <ul
+            class="space-y-4 text-lg"
+            data-aos="fade-left"
+            data-aos-delay="200"
+          >
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-400 mt-1 mr-3"></i
+              ><span
+                ><span class="font-bold text-2xl" data-count="30">0</span>%
+                average reduction in time-to-market</span
+              >
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-400 mt-1 mr-3"></i
+              ><span
+                >Up to
+                <span class="font-bold text-2xl" data-count="40">0</span>% cloud
+                spend optimization</span
+              >
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-400 mt-1 mr-3"></i
+              ><span
+                ><span class="font-bold">Hours to minutes</span> for critical
+                customer workflows</span
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="py-16 md:py-24 relative">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12 max-w-3xl mx-auto" data-aos="fade-up">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-50">
+              What Our Clients Say
+            </h2>
+            <p class="text-lg text-gray-700 dark:text-gray-200 mt-4">
+              We are proud to partner with innovators and industry leaders.
+            </p>
+          </div>
+          <div class="swiper" data-aos="fade-up" data-aos-delay="200">
+            <div class="swiper-wrapper pb-16">
+              <div class="swiper-slide p-2">
+                <div
+                  class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-600 h-full flex flex-col transition-colors duration-200"
+                >
+                  <i class="fas fa-quote-left text-cyan-400 dark:text-cyan-300 text-3xl mb-4"></i>
+                  <blockquote
+                    class="text-lg italic text-gray-700 dark:text-gray-200 mb-6 flex-grow"
+                  >
+                    "TechMaa-AI's expertise in cloud architecture transformed
+                    our infrastructure, leading to a 40% reduction in
+                    operational costs. They are true partners in innovation."
+                  </blockquote>
+                  <footer class="mt-auto">
+                    <div>
+                      <p class="font-bold text-gray-900 dark:text-gray-50">Priya Sharma</p>
+                      <p class="text-sm text-gray-600 dark:text-gray-200">
+                        CTO, Innovate Solutions
+                      </p>
+                    </div>
+                  </footer>
+                </div>
+              </div>
+              <div class="swiper-slide p-2">
+                <div
+                  class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-600 h-full flex flex-col transition-colors duration-200"
+                >
+                  <i class="fas fa-quote-left text-cyan-400 dark:text-cyan-300 text-3xl mb-4"></i>
+                  <blockquote
+                    class="text-lg italic text-gray-700 dark:text-gray-200 mb-6 flex-grow"
+                  >
+                    "The custom AI model they developed has been a game-changer,
+                    improving our delivery efficiency by 25%. I cannot recommend
+                    them highly enough."
+                  </blockquote>
+                  <footer class="mt-auto">
+                    <div>
+                      <p class="font-bold text-gray-900 dark:text-gray-50">Arjun Singh</p>
+                      <p class="text-sm text-gray-600 dark:text-gray-200">
+                        Head of Operations, Global Logistics
+                      </p>
+                    </div>
+                  </footer>
+                </div>
+              </div>
+              <div class="swiper-slide p-2">
+                <div
+                  class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-600 h-full flex flex-col transition-colors duration-200"
+                >
+                  <i class="fas fa-quote-left text-cyan-400 dark:text-cyan-300 text-3xl mb-4"></i>
+                  <blockquote
+                    class="text-lg italic text-gray-700 dark:text-gray-200 mb-6 flex-grow"
+                  >
+                    "Working with TechMaa-AI felt like an extension of our own
+                    team. Their collaborative approach helped us launch a
+                    solution that significantly reduced downtime."
+                  </blockquote>
+                  <footer class="mt-auto">
+                    <div>
+                      <p class="font-bold text-gray-900 dark:text-gray-50">Rohan Mehta</p>
+                      <p class="text-sm text-gray-600 dark:text-gray-200">
+                        VP of Engineering, Manufacturing Inc.
+                      </p>
+                    </div>
+                  </footer>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="swiper-button-prev -left-4"></div>
+          <div class="swiper-button-next -right-4"></div>
+        </div>
+      </section>
+
+      <section class="py-16 md:py-24">
+        <div class="container mx-auto px-6" data-aos="fade-up">
+          <div
+            class="bg-cyan-50/50 dark:bg-cyan-900/20 border border-cyan-100 dark:border-cyan-800 rounded-2xl p-8 md:p-12 text-center max-w-3xl mx-auto transition-colors duration-200"
+          >
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-gray-50">
+              Ready to start building?
+            </h2>
+            <p class="text-lg text-gray-700 dark:text-gray-200 mt-4 mb-8">
+              Join our newsletter for the latest insights on AI and digital
+              transformation, delivered to your inbox.
+            </p>
+            <form
+              id="newsletterForm"
+              class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
+            >
+              <input
+                type="email"
+                name="email"
+                placeholder="Your work email"
+                required
+                class="w-full p-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:outline-none transition-all duration-200"
+              />
+              <button
+                type="submit"
+                class="bg-gray-800 hover:bg-black text-white font-bold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+              >
+                Subscribe
+              </button>
+            </form>
+            <p id="newsletterMsg" class="mt-4 text-sm font-medium"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black text-white">
+      <div class="container mx-auto px-6 pt-16 pb-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="col-span-1">
+            <a href="index.html" class="inline-block">
+              <img
+                src="assets/img/new-techmaa-logo.png"
+                alt="TechMaa-AI Logo"
+                class="w-28 h-auto mb-6"
+              />
+            </a>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Consulting & IT services to help you ship faster—with confidence.
+            </p>
+            <div class="mt-6 flex space-x-5">
+              <a
+                href="#"
+                aria-label="LinkedIn"
+                class="text-gray-400 hover:text-white transition"
+                ><i class="fab fa-linkedin fa-lg"></i
+              ></a>
+              <a
+                href="#"
+                aria-label="Twitter"
+                class="text-gray-400 hover:text-white transition"
+                ><i class="fab fa-twitter fa-lg"></i
+              ></a>
+              <a
+                href="#"
+                aria-label="GitHub"
+                class="text-gray-400 hover:text-white transition"
+                ><i class="fab fa-github fa-lg"></i
+              ></a>
+            </div>
+          </div>
+          <nav>
+            <h5 class="font-bold text-gray-200 mb-4">Company</h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="careers.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <nav>
+            <h5 class="font-bold text-gray-200 mb-4">Resources</h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="insights.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >Insights</a
+                >
+              </li>
+              <li>
+                <a
+                  href="privacy.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="terms.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a
+                  href="blog.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >About Us</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <h5 class="font-bold text-gray-200 mb-4">Get in touch</h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="mailto:hello@techmaa-ai.com"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >hello@techmaa-ai.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 dark:text-gray-300"
+        >
+          <small
+            >&copy; <span id="year"></span> TechMaa-AI. All rights
+            reserved.</small
+          >
+
+          <p class="text-sm mt-4">
+            Please note: This is a demonstration website created as a generative
+            AI response. The official website for the company referenced is
+            <a
+              href="https://techmaa.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline text-gray-400 hover:text-cyan-500 transition"
+              >TechMaa | Enterprise IT Solutions & Digital Transformation</a
+            >.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/theme.js?v=3"></script>
+    <script src="assets/js/sidebar.js?v=4" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // --- Library Initializations ---
+        AOS.init({ duration: 800, once: true, offset: 50 });
+
+        new Typed("#typed-element", {
+          strings: ["AI", "Data", "Cloud-Computing", "Generative AI"],
+          typeSpeed: 80,
+          backSpeed: 50,
+          backDelay: 2000,
+          loop: true,
+          smartBackspace: true,
+        });
+
+        new Swiper(".swiper", {
+          loop: true,
+          autoplay: { delay: 5000, disableOnInteraction: false },
+          pagination: { el: ".swiper-pagination", clickable: true },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          slidesPerView: 1,
+          spaceBetween: 20,
+          breakpoints: { 768: { slidesPerView: 2 } },
+        });
+
+        // --- Intersection Observer for Number Counters ---
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const counters = entry.target.querySelectorAll("[data-count]");
+                counters.forEach((counter) => {
+                  const target = +counter.getAttribute("data-count");
+                  let count = 0;
+                  const speed = 200;
+                  const increment = target / speed;
+                  const updateCount = () => {
+                    if (count < target) {
+                      count += increment;
+                      counter.innerText = Math.ceil(count);
+                      setTimeout(updateCount, 1);
+                    } else {
+                      counter.innerText = target;
+                    }
+                  };
+                  updateCount();
+                });
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+
+        const outcomesSection = document.getElementById("outcomes-section");
+        if (outcomesSection) {
+          observer.observe(outcomesSection);
+        }
+
+        // --- Set Current Year in Footer ---
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // --- UPDATED Newsletter Form Submission Logic ---
+        const newsletterForm = document.getElementById("newsletterForm");
+        const newsletterMsg = document.getElementById("newsletterMsg");
+
+        if (newsletterForm) {
+          newsletterForm.addEventListener("submit", async (e) => {
+            e.preventDefault(); // Prevent default form submission
+
+            const emailInput = newsletterForm.querySelector(
+              'input[name="email"]'
+            );
+            const email = emailInput.value;
+
+            // Clear previous messages
+            newsletterMsg.textContent = "";
+            newsletterMsg.classList.remove("text-green-600", "text-red-600");
+
+            try {
+              // Send the data to your backend API
+              const response = await fetch("http://localhost:3000/subscribe", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ email: email }),
+              });
+
+              const data = await response.json();
+
+              if (response.ok) {
+                // Success
+                newsletterMsg.textContent = data.message;
+                newsletterMsg.classList.add("text-green-600");
+                newsletterForm.reset();
+              } else {
+                // Error from server (e.g., duplicate email)
+                newsletterMsg.textContent = data.message;
+                newsletterMsg.classList.add("text-red-600");
+              }
+            } catch (error) {
+              // Network or other errors
+              console.error("Submission error:", error);
+              newsletterMsg.textContent =
+                "Could not connect to the server. Please try again.";
+              newsletterMsg.classList.add("text-red-600");
+            }
+
+            // Make the message disappear after a while
+            setTimeout(() => {
+              newsletterMsg.textContent = "";
+              newsletterMsg.classList.remove("text-green-600", "text-red-600");
+            }, 5000);
+          });
+        }
+      });
+    </script>
+
+
+
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/68a8b295ce17d419321e5cba/1j39fj6h8";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
+  </body>
+</html>

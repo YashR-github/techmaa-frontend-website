@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" class="side-nav-enabled">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers - Join Our Team | TechMaa-AI</title>
+    <meta name="description" content="Explore exciting career opportunities at TechMaa-AI. Join our team of innovators in AI, cloud technology, and digital transformation." />
+
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <link rel="stylesheet" href="assets/css/sidebar.css?v=4" />
+  <script src="assets/js/sidebar.js?v=4" defer></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
+    <style>
+      body { font-family: "Inter", sans-serif; }
+
+      .bg-dots {
+        background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+        background-size: 1.5rem 1.5rem;
+      }
+      .dark .bg-dots {
+        background-image: radial-gradient(#374151 1px, transparent 1px);
+        background-size: 1.5rem 1.5rem;
+      }
+
+      .job-card { transition: all 0.3s ease; }
+      .job-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      }
+
+      .form-field:focus {
+        outline: none;
+        border-color: #06b6d4; /* Cyan-500 */
+        box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+      }
+      .form-field.error {
+        border-color: #ef4444;
+        box-shadow: 0 0 0 3px rgba(239,68,68,0.1);
+      }
+
+      .search-container { transition: all 0.3s ease; }
+      .search-container:focus-within { transform: scale(1.02); }
+
+      .loading-spinner { animation: spin 1s linear infinite; }
+      @keyframes spin { from{transform:rotate(0);} to{transform:rotate(360deg);} }
+
+      .modal { backdrop-filter: blur(8px); }
+      .modal-content { animation: modalSlideUp .3s ease-out; }
+      @keyframes modalSlideUp {
+        from {opacity:0; transform:translateY(30px);}
+        to   {opacity:1; transform:translateY(0);}
+      }
+
+      .badge { transition: all .2s ease; }
+      .badge:hover { transform: scale(1.05); }
+
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-200">
+    <main>
+    <section class="bg-white dark:bg-gray-800 transition-colors duration-200">
+        <div class="container mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+          <div class="text-center md:text-left">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-gray-50 mb-6">
+              Shape the Future with
+              <span class="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">TechMaa-AI</span>
+            </h1>
+            <p class="text-lg text-gray-700 dark:text-gray-200 mb-8 max-w-xl mx-auto md:mx-0">
+              Join a global team of innovators, engineers, and creators who are using AI, data, and cloud to transform industries.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <a href="#job-search" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">View Open Roles</a>
+              <a href="#life" class="bg-gray-800 hover:bg-black text-white font-bold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">Life at TechMaa-AI</a>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <img src="assets/img/lifeAtTechmaa.png" alt="Team collaborating at TechMaa-AI" class="rounded-lg shadow-2xl w-full max-w-md"/>
+          </div>
+        </div>
+      </section>
+
+      <section id="life" class="py-16 md:py-24">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1">
+            <img src="assets/img/miniGames.png" alt="A collaborative and fun work environment" class="rounded-lg shadow-2xl w-full max-w-md mx-auto"/>
+          </div>
+          <div class="order-1 md:order-2">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-50 mb-6">Life at TechMaa-AI</h2>
+            <p class="text-lg text-gray-700 dark:text-gray-200 mb-8">
+              We believe in an outcome-first culture, driven by collaboration, curiosity, and continuous learning.
+            </p>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-cyan-500 mt-1 mr-3"></i>
+                <span class="text-gray-700 dark:text-gray-200">Work on cutting-edge AI, data, and cloud transformation projects</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-cyan-500 mt-1 mr-3"></i>
+                <span class="text-gray-700 dark:text-gray-200">Flexible working options: hybrid, remote, and global mobility</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-cyan-500 mt-1 mr-3"></i>
+                <span class="text-gray-700 dark:text-gray-200">Continuous learning programs and certifications</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-cyan-500 mt-1 mr-3"></i>
+                <span class="text-gray-700 dark:text-gray-200">A diverse, inclusive, and collaborative environment</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    <section id="job-search" class="py-16 md:py-24 bg-gray-100 dark:bg-gray-700 transition-colors duration-200">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-50">Find Your Perfect Role</h2>
+          <p class="text-lg text-gray-700 dark:text-gray-200 mt-4">Search through our open positions and find where you belong.</p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-100 dark:border-gray-600 mb-8 transition-colors duration-200" data-aos="fade-up" data-aos-delay="200">
+          <div class="grid grid-cols-1 lg:grid-cols-5 gap-4">
+            <div class="relative lg:col-span-2">
+              <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500"></i>
+              <input type="text" id="job-search-input" placeholder="Search jobs (e.g., Frontend Developer)" class="w-full pl-12 pr-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 rounded-lg form-field">
+            </div>
+
+            <div class="relative">
+              <i class="fas fa-map-marker-alt absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500"></i>
+              <select id="location-filter" class="w-full pl-12 pr-10 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 rounded-lg form-field appearance-none">
+                <option value="">All Locations</option>
+                <option value="bangalore">Bangalore</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="delhi">Delhi</option>
+                <option value="remote">Remote</option>
+                <option value="hybrid">Hybrid</option>
+              </select>
+              <i class="fas fa-chevron-down absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 pointer-events-none"></i>
+            </div>
+
+            <div class="relative">
+              <i class="fas fa-briefcase absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500"></i>
+              <select id="department-filter" class="w-full pl-12 pr-10 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 rounded-lg form-field appearance-none">
+                <option value="">All Departments</option>
+                <option value="engineering">Engineering</option>
+                <option value="ai-data">AI &amp; Data Science</option>
+                <option value="consulting">Consulting</option>
+                <option value="design">Design</option>
+                <option value="sales">Sales &amp; Marketing</option>
+                <option value="operations">Operations</option>
+              </select>
+              <i class="fas fa-chevron-down absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 pointer-events-none"></i>
+            </div>
+            
+            <button id="search-btn" class="bg-gray-800 dark:bg-gray-700 hover:bg-black dark:hover:bg-gray-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
+              <i class="fas fa-magnifying-glass mr-2"></i>Search
+            </button>
+          </div>
+        </div>
+
+        <div id="initial-prompt" class="text-center py-16">
+          <div class="bg-white dark:bg-gray-800 rounded-2xl p-12 shadow-lg border border-gray-100 dark:border-gray-600">
+            <i class="fas fa-search text-6xl text-cyan-500 mb-6"></i>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-50 mb-4">Ready to Find Your Dream Job?</h3>
+            <p class="text-gray-600 dark:text-gray-200 text-lg mb-8 max-w-2xl mx-auto">
+              Use the search bar above to explore our exciting career opportunities. Search by job title, skills, location, or department to find the perfect role for you.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+              <button onclick="quickSearch('frontend')" class="bg-yellow-100 dark:bg-yellow-900 hover:bg-yellow-200 dark:hover:bg-yellow-800 text-yellow-800 dark:text-yellow-200 py-3 px-4 rounded-lg transition-all duration-300 text-sm font-semibold">
+                <i class="fas fa-code mr-2"></i>Frontend
+              </button>
+              <button onclick="quickSearch('ai')" class="bg-blue-100 dark:bg-blue-900 hover:bg-blue-200 dark:hover:bg-blue-800 text-blue-800 dark:text-blue-200 py-3 px-4 rounded-lg transition-all duration-300 text-sm font-semibold">
+                <i class="fas fa-robot mr-2"></i>AI/ML
+              </button>
+              <button onclick="quickSearch('cloud')" class="bg-cyan-100 dark:bg-cyan-900 hover:bg-cyan-200 dark:hover:bg-cyan-800 text-cyan-800 dark:text-cyan-200 py-3 px-4 rounded-lg transition-all duration-300 text-sm font-semibold">
+                <i class="fas fa-cloud mr-2"></i>Cloud
+              </button>
+              <button onclick="quickSearch('design')" class="bg-gray-100 dark:bg-gray-600 hover:bg-gray-200 dark:hover:bg-gray-500 text-gray-800 dark:text-gray-200 py-3 px-4 rounded-lg transition-all duration-300 text-sm font-semibold">
+                <i class="fas fa-palette mr-2"></i>Design
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="job-results" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 hidden"></div>
+
+        <div id="loading-state" class="text-center py-12 hidden">
+          <i class="fas fa-spinner loading-spinner text-4xl text-cyan-500 mb-4"></i>
+          <p class="text-gray-600 dark:text-gray-200">Searching for opportunities...</p>
+        </div>
+
+        <div id="no-results" class="text-center py-12 hidden">
+          <i class="fas fa-search text-4xl text-gray-400 dark:text-gray-500 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-700 dark:text-gray-200 mb-2">No positions found</h3>
+          <p class="text-gray-600 dark:text-gray-200 mb-6">Try adjusting your search criteria or check back later for new opportunities.</p>
+          <button onclick="clearFilters()" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-2 px-6 rounded-lg transition">
+            Clear Search
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-gray-900 dark:bg-gray-950 text-white transition-colors duration-200">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white dark:text-gray-50">Why Choose TechMaa-AI?</h2>
+          <p class="text-lg text-gray-300 dark:text-gray-200 mt-4">We believe in creating an environment where talent thrives.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-yellow-500 dark:bg-yellow-600 text-gray-900 dark:text-gray-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-rocket text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white dark:text-gray-50 mb-2">Innovation First</h3>
+            <p class="text-gray-300 dark:text-gray-200">Work on cutting-edge projects using the latest AI and cloud technologies.</p>
+          </div>
+
+          <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-yellow-500 dark:bg-yellow-600 text-gray-900 dark:text-gray-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-users text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white dark:text-gray-50 mb-2">Collaborative Culture</h3>
+            <p class="text-gray-300 dark:text-gray-200">Join a diverse team of experts who support each other's growth.</p>
+          </div>
+
+          <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="bg-yellow-500 dark:bg-yellow-600 text-gray-900 dark:text-gray-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-chart-line text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white dark:text-gray-50 mb-2">Career Growth</h3>
+            <p class="text-gray-300 dark:text-gray-200">Clear paths for advancement with continuous learning opportunities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-white dark:bg-gray-800 transition-colors duration-200">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-50">Comprehensive Benefits</h2>
+          <p class="text-lg text-gray-700 dark:text-gray-200 mt-4">We invest in our team's wellbeing and success.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-heartbeat text-3xl text-cyan-500 dark:text-cyan-400 mb-3"></i>
+            <h4 class="font-semibold">Health &amp; Wellness</h4>
+          </div>
+          <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-graduation-cap text-3xl text-cyan-500 dark:text-cyan-400 mb-3"></i>
+            <h4 class="font-semibold text-gray-900 dark:text-gray-50">Learning Budget</h4>
+          </div>
+          <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-home text-3xl text-cyan-500 dark:text-cyan-400 mb-3"></i>
+            <h4 class="font-semibold text-gray-900 dark:text-gray-50">Flexible Work</h4>
+          </div>
+          <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+            <i class="fas fa-plane text-3xl text-cyan-500 dark:text-cyan-400 mb-3"></i>
+            <h4 class="font-semibold text-gray-900 dark:text-gray-50">Paid Time Off</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-900 dark:bg-gray-950 text-white transition-colors duration-200">
+        <div class="container mx-auto px-6 py-16 text-center">
+            <h2 class="text-3xl font-bold text-white dark:text-gray-50 mb-4">Didn't find the right role?</h2>
+            <p class="text-gray-300 dark:text-gray-200 mb-8 max-w-2xl mx-auto">
+                We’re always looking for exceptional talent. Share your profile with us, and we’ll reach out when an opportunity fits.
+            </p>
+            <a href="job-application.html" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">Send Your CV</a>
+        </div>
+    </section>
+</main>
+    <footer class="bg-black text-white">
+      <div class="container mx-auto px-6 pt-16 pb-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="col-span-1">
+             <a href="index.html">
+                <img src="assets/img/new-techmaa-logo.png" alt="TechMaa-AI Logo" class="w-28 h-auto mb-6" />
+             </a>
+            <p class="text-gray-400 text-sm">
+              Consulting & IT services to help you ship faster—with confidence.
+            </p>
+            <div class="mt-6 flex space-x-5">
+                <a href="#" aria-label="LinkedIn" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="#" aria-label="GitHub" class="text-gray-400 hover:text-white transition"><i class="fab fa-github fa-lg"></i></a>
+            </div>
+          </div>
+          <nav>
+            <h5 class="font-bold text-gray-200 mb-4">Company</h5>
+            <ul class="space-y-3">
+              <li><a href="services.html" class="text-gray-400 hover:text-cyan-400 transition">Services</a></li>
+              <li><a href="careers.html" class="text-gray-400 hover:text-cyan-400 transition">Careers</a></li>
+              <li><a href="contact.html" class="text-gray-400 hover:text-cyan-400 transition">Contact Us</a></li>
+            </ul>
+          </nav>
+          <nav>
+            <h5 class="font-bold text-gray-200 mb-4">Resources</h5>
+            <ul class="space-y-3">
+              <li><a href="insights.html" class="text-gray-400 hover:text-cyan-400 transition">Insights</a></li>
+              <li><a href="privacy.html" class="text-gray-400 hover:text-cyan-400 transition">Privacy Policy</a></li>
+              <li><a href="terms.html" class="text-gray-400 hover:text-cyan-400 transition">Terms of Service</a></li>
+              <li><a href="blog.html" class="text-gray-400 hover:text-cyan-400 transition">Blog</a></li>
+              <li><a href="about.html" class="text-gray-400 hover:text-cyan-400 transition">About Us</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h5 class="font-bold text-gray-200 mb-4">Get in touch</h5>
+             <ul class="space-y-3">
+                 <li><a href="mailto:hello@techmaa-ai.com" class="text-gray-400 hover:text-cyan-400 transition">hello@techmaa-ai.com</a></li>
+                 </ul>
+          </div>
+        </div>
+        <div
+          class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 dark:text-gray-300"
+        >
+          <small
+            >&copy; <span id="year"></span> TechMaa-AI. All rights
+            reserved.</small
+          >
+
+          <p class="text-sm mt-4">
+            Please note: This is a demonstration website created as a generative
+            AI response. The official website for the company referenced is
+            <a
+              href="https://techmaa.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline text-gray-400 hover:text-cyan-500 transition"
+              >TechMaa | Enterprise IT Solutions & Digital Transformation</a
+            >.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+  <script src="assets/js/theme.js?v=3"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      AOS.init({ duration: 800, once: true, offset: 50 });
+
+      const jobs = [
+        { id:1, title:"Senior Frontend Developer", department:"engineering", location:"bangalore", type:"Full-time", experience:"4-6 years", salary:"₹15-25 LPA",
+          description:"Build beautiful, responsive web applications using React, TypeScript, and modern CSS frameworks.",
+          requirements:["4+ years React experience","TypeScript proficiency","Modern CSS/Tailwind","REST API integration"], posted:"2 days ago" },
+        { id:2, title:"AI/ML Engineer", department:"ai-data", location:"mumbai", type:"Full-time", experience:"3-5 years", salary:"₹18-28 LPA",
+          description:"Develop and deploy machine learning models for real-world business applications.",
+          requirements:["Python/TensorFlow/PyTorch","ML model deployment","Cloud platforms (AWS/GCP)","Statistics background"], posted:"1 week ago" },
+        { id:3, title:"Cloud Solutions Architect", department:"engineering", location:"remote", type:"Full-time", experience:"7-10 years", salary:"₹25-35 LPA",
+          description:"Design and implement scalable cloud infrastructure solutions using AWS, Azure, and GCP.",
+          requirements:["AWS/Azure/GCP certification","Kubernetes/Docker","Infrastructure as Code","DevOps practices"], posted:"3 days ago" },
+        { id:4, title:"UX/UI Designer", department:"design", location:"bangalore", type:"Part-time", experience:"2-4 years", salary:"₹12-18 LPA",
+          description:"Create intuitive and beautiful user experiences for our AI-powered applications.",
+          requirements:["Figma/Sketch proficiency","User research experience","Prototyping skills","Design systems"], posted:"5 days ago" },
+        { id:5, title:"Data Scientist", department:"ai-data", location:"delhi", type:"Full-time", experience:"2-5 years", salary:"₹16-24 LPA",
+          description:"Extract insights from complex datasets and build predictive models for business optimization.",
+          requirements:["Python/R/SQL","Statistical modeling","Data visualization","Business acumen"], posted:"1 day ago" },
+        { id:6, title:"DevOps Intern", department:"engineering", location:"hybrid", type:"Internship", experience:"0-1 years", salary:"₹3-4 LPA",
+          description:"Assist in maintaining CI/CD pipelines and automating infrastructure.",
+          requirements:["Basic Docker knowledge","Shell scripting","Linux fundamentals"], posted:"4 days ago" }
+      ];
+
+      let hasSearched = false;
+
+      function renderJobs(list) {
+        const jobResults = document.getElementById('job-results');
+        const noResults = document.getElementById('no-results');
+        const initial = document.getElementById('initial-prompt');
+
+        if (hasSearched) { initial.classList.add('hidden'); jobResults.classList.remove('hidden'); }
+        if (list.length === 0 && hasSearched) {
+          jobResults.innerHTML = '';
+          noResults.classList.remove('hidden');
+          return;
+        }
+        noResults.classList.add('hidden');
+
+        if (hasSearched) {
+          jobResults.innerHTML = list.map(job => `
+            <div class="job-card bg-white dark:bg-gray-700 p-6 rounded-xl border border-gray-100 dark:border-gray-600 shadow-lg transition-colors duration-200" data-aos="fade-up">
+              <h3 class="text-xl font-bold text-gray-900 dark:text-gray-50 mb-2">${job.title}</h3>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="badge bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs px-2 py-1 rounded-full">
+                  <i class="fas fa-map-marker-alt mr-1"></i>${job.location.charAt(0).toUpperCase() + job.location.slice(1)}
+                </span>
+                <span class="badge bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">
+                  <i class="fas fa-briefcase mr-1"></i>${job.type}
+                </span>
+                <span class="badge bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 text-xs px-2 py-1 rounded-full">
+                  <i class="fas fa-clock mr-1"></i>${job.experience}
+                </span>
+              </div>
+              <p class="text-gray-600 dark:text-gray-200 text-sm mb-3 line-clamp-2">${job.description}</p>
+              <div class="text-sm text-gray-500 dark:text-gray-300 mb-3">
+                <i class="fas fa-rupee-sign mr-1"></i>${job.salary}
+              </div>
+              <div class="flex flex-wrap gap-1 mb-4">
+                ${job.requirements.slice(0,3).map(r=>`<span class="text-xs bg-gray-100 dark:bg-gray-600 text-gray-600 dark:text-gray-200 px-2 py-1 rounded">${r}</span>`).join('')}
+                ${job.requirements.length>3 ? `<span class="text-xs text-gray-500 dark:text-gray-300">+${job.requirements.length-3} more</span>` : ''}
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-xs text-gray-400 dark:text-gray-400">Posted ${job.posted}</span>
+                <a href="apply-form.html?role=${encodeURIComponent(job.title)}" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-2 px-4 rounded-lg transition-all duration-300">
+                  <i class="fas fa-paper-plane mr-1"></i>Apply Now
+                </a>
+                </div>
+            </div>`).join('');
+          AOS.refresh();
+        }
+      }
+
+      function applyFilters() {
+        const term = document.getElementById('job-search-input').value.toLowerCase();
+        const locFilter = document.getElementById('location-filter').value;
+        const depFilter = document.getElementById('department-filter').value;
+        
+        if (!term && !locFilter && !depFilter) return;
+        hasSearched = true;
+
+        const filteredJobs = jobs.filter(job => {
+          const searchMatch = !term || job.title.toLowerCase().includes(term) || job.description.toLowerCase().includes(term) || job.requirements.some(r => r.toLowerCase().includes(term));
+          const locMatch = !locFilter || job.location === locFilter;
+          const depMatch = !depFilter || job.department === depFilter;
+          return searchMatch && locMatch && depMatch;
+        });
+
+        const loading = document.getElementById('loading-state');
+        const results = document.getElementById('job-results');
+        const initial = document.getElementById('initial-prompt');
+        initial.classList.add('hidden');
+        results.innerHTML = '';
+        results.classList.remove('hidden');
+        loading.classList.remove('hidden');
+
+        setTimeout(() => {
+          loading.classList.add('hidden');
+          renderJobs(filteredJobs);
+        }, 800);
+      }
+
+      window.quickSearch = term => { document.getElementById('job-search-input').value = term; applyFilters(); };
+      
+      document.getElementById('search-btn').addEventListener('click', applyFilters);
+      document.getElementById('job-search-input').addEventListener('keyup', e => { if (e.key==='Enter') applyFilters(); });
+      document.getElementById('location-filter').addEventListener('change', applyFilters);
+      document.getElementById('department-filter').addEventListener('change', applyFilters);
+      
+      window.clearFilters = () => {
+        document.getElementById('job-search-input').value = '';
+        document.getElementById('location-filter').value = '';
+        document.getElementById('department-filter').value= '';
+        hasSearched = false;
+        document.getElementById('initial-prompt').classList.remove('hidden');
+        document.getElementById('job-results').classList.add('hidden');
+        document.getElementById('no-results').classList.add('hidden');
+      };
+
+      // Mobile Menu Logic
+      const mBtn = document.getElementById('mobile-menu-button');
+      const mClose= document.getElementById('close-mobile-menu');
+      const mMenu = document.getElementById('mobile-menu');
+      const mOverlay = document.getElementById('mobile-menu-overlay');
+      const toggleMenu = () => {
+        const open = !mMenu.classList.contains('translate-x-full');
+        mMenu.classList.toggle('translate-x-full', !open);
+        mOverlay.classList.toggle('hidden', !open);
+        document.body.classList.toggle('overflow-hidden', open);
+      };
+      mBtn.addEventListener('click', toggleMenu);
+      mClose.addEventListener('click', toggleMenu);
+      mOverlay.addEventListener('click', toggleMenu);
+      
+      document.getElementById('year').textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

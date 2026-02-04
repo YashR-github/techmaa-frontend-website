@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth side-nav-enabled">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy | TechMaa-AI</title>
+
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      }
+    </script>
+    <script src="assets/js/theme.js?v=3"></script>
+
+  <link rel="stylesheet" href="assets/css/sidebar.css?v=4" />
+  <script src="assets/js/sidebar.js?v=4" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      /* Custom styles for Tailwind's prose class for legal pages */
+      .prose h2 {
+        color: #1f2937; /* gray-800 */
+        border-bottom: 1px solid #e5e7eb; /* gray-200 */
+        padding-bottom: 0.5rem;
+        margin-top: 2.5em;
+        margin-bottom: 1.5em;
+      }
+      .prose a {
+        color: #f59e0b; /* yellow-500 */
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .prose a:hover {
+        text-decoration: underline;
+      }
+      /* Ensure anchor links don't get hidden behind the sticky header */
+      h2[id] {
+        scroll-margin-top: 100px;
+      }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-200">
+<header class="bg-black text-white shadow-lg sticky top-0 z-50" style="display: none;">
+  <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="index.html" class="flex items-center space-x-2 text-2xl font-bold" aria-label="TechMaa-AI Home">
+      <img src="assets/img/new-techmaa-logo.png" alt="TechMaa-AI Logo" class="w-56 h-auto my-3" />
+    </a>
+
+    <ul class="hidden md:flex items-center space-x-6 text-gray-300">
+      <li><a href="index.html" class="hover:text-yellow-400 transition">Home</a></li>
+      <li><a href="about.html" class="hover:text-yellow-400 transition">About Us</a></li>
+      <li><a href="services.html" class="hover:text-yellow-400 transition">Services</a></li>
+      <li><a href="blog.html" class="hover:text-yellow-400 transition">Blog</a></li>
+      <li><a href="testimonials.html" class="hover:text-yellow-400 transition">Testimonials</a></li>
+      <li><a href="insights.html" class="hover:text-yellow-400 transition">Insights</a></li>
+      <li><a href="careers.html" class="hover:text-yellow-400 transition">Careers</a></li>
+      <li><a href="employes.html" class="hover:text-yellow-400 transition">Team</a></li>
+      <li><a href="contact.html" class="text-yellow-400 hover:text-yellow-300 font-semibold transition">Contact</a></li>
+    </ul>
+
+    <button id="mobile-menu-button" class="md:hidden focus:outline-none" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+  </nav>
+
+  <div id="mobile-menu-overlay" class="md:hidden fixed inset-0 bg-black bg-opacity-75 z-40 hidden"></div>
+  <div id="mobile-menu" class="md:hidden fixed top-0 right-0 w-64 h-full bg-gray-900 text-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+    <div class="p-6 flex justify-end">
+      <button id="close-mobile-menu" class="text-white focus:outline-none" aria-label="Close mobile menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <ul class="flex flex-col space-y-4 px-6 text-gray-300">
+      <li><a href="index.html" class="block py-2 hover:text-yellow-400 transition">Home</a></li>
+      <li><a href="about.html" class="block py-2 hover:text-yellow-400 transition">About Us</a></li>
+      <li><a href="services.html" class="block py-2 hover:text-yellow-400 transition">Services</a></li>
+      <li><a href="blog.html" class="block py-2 hover:text-yellow-400 transition">Blog</a></li>
+      <li><a href="testimonials.html" class="block py-2 hover:text-yellow-400 transition">Testimonials</a></li>
+      <li><a href="insights.html" class="block py-2 hover:text-yellow-400 transition">Insights</a></li>
+      <li><a href="careers.html" class="block py-2 hover:text-yellow-400 transition">Careers</a></li>
+      <li><a href="employes.html" class="block py-2 hover:text-yellow-400 transition">Team</a></li>
+      <li><a href="contact.html" class="block py-2 text-yellow-400 font-semibold">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+    <main>
+        <section class="bg-white border-b border-gray-200">
+            <div class="container mx-auto px-6 py-12">
+                <h1 class="text-4xl font-extrabold text-gray-900">Privacy Policy</h1>
+                <p class="mt-2 text-lg text-gray-600"><strong>Last Updated:</strong> 15 August 2025</p>
+            </div>
+        </section>
+
+        <div class="container mx-auto px-6 py-12">
+            <div class="lg:grid lg:grid-cols-4 lg:gap-12">
+                <nav class="hidden lg:block lg:col-span-1">
+                    <div class="sticky top-28">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">On this page</h3>
+                        <ul id="privacy-nav" class="space-y-2 border-l-2 border-gray-200">
+                            <li><a href="#info-collect" class="block border-l-2 border-transparent -ml-px pl-4 py-1 text-gray-600 hover:text-yellow-600 hover:border-yellow-500">Information We Collect</a></li>
+                            <li><a href="#info-use" class="block border-l-2 border-transparent -ml-px pl-4 py-1 text-gray-600 hover:text-yellow-600 hover:border-yellow-500">How We Use Information</a></li>
+                            <li><a href="#info-disclosure" class="block border-l-2 border-transparent -ml-px pl-4 py-1 text-gray-600 hover:text-yellow-600 hover:border-yellow-500">Disclosure of Information</a></li>
+                            <li><a href="#security" class="block border-l-2 border-transparent -ml-px pl-4 py-1 text-gray-600 hover:text-yellow-600 hover:border-yellow-500">Data Security</a></li>
+                            <li><a href="#rights" class="block border-l-2 border-transparent -ml-px pl-4 py-1 text-gray-600 hover:text-yellow-600 hover:border-yellow-500">Your Rights</a></li>
+                            <li><a href="#children" class="block border-l-2 border-transparent -ml-px pl-4 py-1 text-gray-600 hover:text-yellow-600 hover:border-yellow-500">Children's Privacy</a></li>
+                            <li><a href="#changes" class="block border-l-2 border-transparent -ml-px pl-4 py-1 text-gray-600 hover:text-yellow-600 hover:border-yellow-500">Policy Changes</a></li>
+                            <li><a href="#contact" class="block border-l-2 border-transparent -ml-px pl-4 py-1 text-gray-600 hover:text-yellow-600 hover:border-yellow-500">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="lg:col-span-3">
+                    <article class="prose prose-lg max-w-none">
+                        <div class="p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-r-lg mb-8">
+                            <p class="font-bold">Disclaimer:</p>
+                            <p class="text-sm">This is a template and not legal advice. You should consult with a legal professional to ensure this policy meets your specific business requirements and complies with all applicable laws.</p>
+                        </div>
+
+                        <p>TechMaa-AI ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.</p>
+
+                        <h2 id="info-collect">1. Information We Collect</h2>
+                        <p>We may collect information about you in a variety of ways. The information we may collect on the Site includes:</p>
+                        <ul>
+                            <li><strong>Personal Data:</strong> Personally identifiable information, such as your name, email address, and telephone number, that you voluntarily give to us when you fill out a contact form, apply for a career, or subscribe to our newsletter.</li>
+                            <li><strong>Usage Data:</strong> Information our servers automatically collect when you access the Site, such as your IP address, browser type, operating system, access times, and the pages you have viewed directly before and after accessing the Site.</li>
+                            <li><strong>Cookies and Tracking Technologies:</strong> We may use cookies and other tracking technologies to help customize the Site and improve your experience.</li>
+                        </ul>
+
+                        <h2 id="info-use">2. How We Use Your Information</h2>
+                        <p>Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Site to:</p>
+                        <ul>
+                            <li>Respond to your inquiries and provide customer support.</li>
+                            <li>Email you with newsletters or other information about our services.</li>
+                            <li>Analyze usage and trends to improve our website and services.</li>
+                            <li>Process your application for employment.</li>
+                            <li>Comply with legal and regulatory requirements.</li>
+                        </ul>
+                        
+                        <h2 id="info-disclosure">3. Disclosure of Your Information</h2>
+                        <p>We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties. This does not include trusted third parties who assist us in operating our website or conducting our business, so long as those parties agree to keep this information confidential.</p>
+
+                        <h2 id="security">4. Data Security</h2>
+                        <p>We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable.</p>
+
+                        <h2 id="rights">5. Your Data Protection Rights</h2>
+                        <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+                        <ul>
+                            <li>The right to access – You have the right to request copies of your personal data.</li>
+                            <li>The right to rectification – You have the right to request that we correct any information you believe is inaccurate.</li>
+                            <li>The right to erasure – You have the right to request that we erase your personal data, under certain conditions.</li>
+                        </ul>
+                        
+                        <h2 id="children">6. Children's Privacy</h2>
+                        <p>Our website is not intended for use by children under the age of 13, and we do not knowingly collect personal information from children under 13.</p>
+                        
+                        <h2 id="changes">7. Changes to This Privacy Policy</h2>
+                        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+
+                        <h2 id="contact">8. Contact Us</h2>
+                        <p>If you have questions or comments about this Privacy Policy, please contact us at:</p>
+                        <p>
+                            TechMaa-AI<br>
+                            Email: <a href="mailto:privacy@techmaa-ai.com">privacy@techmaa-ai.com</a><br>
+                            <a href="contact.html">Contact Page</a>
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="bg-black text-white">
+      <div class="container mx-auto px-6 pt-16 pb-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="col-span-1">
+             <a href="index.html">
+                <img src="assets/img/new-techmaa-logo.png" alt="TechMaa-AI Logo" class="w-40 h-auto mb-6" />
+             </a>
+            <p class="text-gray-400 text-sm">
+              Consulting & IT services to help you ship faster—with confidence.
+            </p>
+            <div class="mt-6 flex space-x-5">
+                <a href="#" aria-label="LinkedIn" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="#" aria-label="GitHub" class="text-gray-400 hover:text-white transition"><i class="fab fa-github fa-lg"></i></a>
+            </div>
+          </div>
+          <nav>
+            <h5 class="font-bold text-gray-200 mb-4">Company</h5>
+            <ul class="space-y-3">
+              <li><a href="services.html" class="text-gray-400 hover:text-cyan-400 transition">Services</a></li>
+              <li><a href="careers.html" class="text-gray-400 hover:text-cyan-400 transition">Careers</a></li>
+              <li><a href="contact.html" class="text-gray-400 hover:text-cyan-400 transition">Contact Us</a></li>
+            </ul>
+          </nav>
+          <nav>
+            <h5 class="font-bold text-gray-200 mb-4">Resources</h5>
+            <ul class="space-y-3">
+              <li><a href="insights.html" class="text-gray-400 hover:text-cyan-400 transition">Insights</a></li>
+              <li><a href="privacy.html" class="text-gray-400 hover:text-cyan-400 transition">Privacy Policy</a></li>
+              <li><a href="terms.html" class="text-gray-400 hover:text-cyan-400 transition">Terms of Service</a></li>
+              <li><a href="blog.html" class="text-gray-400 hover:text-cyan-400 transition">Blog</a></li>
+              <li><a href="about.html" class="text-gray-400 hover:text-cyan-400 transition">About Us</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h5 class="font-bold text-gray-200 mb-4">Get in touch</h5>
+             <ul class="space-y-3">
+                 <li><a href="mailto:hello@techmaa-ai.com" class="text-gray-400 hover:text-cyan-400 transition">hello@techmaa-ai.com</a></li>
+                 </ul>
+          </div>
+        </div>
+        <div
+          class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500"
+        >
+          <small
+            >&copy; <span id="year"></span> TechMaa-AI. All rights
+            reserved.</small
+          >
+
+          <p class="text-sm mt-4">
+            Please note: This is a demonstration website created as a generative
+            AI response. The official website for the company referenced is
+            <a
+              href="https://techmaa.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline text-gray-400 hover:text-cyan-500 transition"
+              >TechMaa | Enterprise IT Solutions & Digital Transformation</a
+            >.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const closeMobileMenuButton = document.getElementById("close-mobile-menu");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
+
+        const toggleMobileMenu = () => {
+          const isOpen = mobileMenu.classList.contains("translate-x-full");
+          if (isOpen) {
+            mobileMenu.classList.remove("translate-x-full");
+            mobileMenuOverlay.classList.remove("hidden");
+            document.body.classList.add("overflow-hidden"); 
+          } else {
+            mobileMenu.classList.add("translate-x-full");
+            mobileMenuOverlay.classList.add("hidden");
+            document.body.classList.remove("overflow-hidden");
+          }
+        };
+        mobileMenuButton.addEventListener("click", toggleMobileMenu);
+        if (closeMobileMenuButton) closeMobileMenuButton.addEventListener("click", toggleMobileMenu);
+        mobileMenuOverlay.addEventListener("click", toggleMobileMenu);
+
+        // --- Set Current Year in Footer ---
+        document.getElementById("year").textContent = new Date().getFullYear();
+        
+        // --- Sticky Nav Active State on Scroll for Privacy Page ---
+        const sections = document.querySelectorAll('h2[id]');
+        const navLinks = document.querySelectorAll('#privacy-nav a');
+        
+        if(sections.length > 0 && navLinks.length > 0) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('font-bold', 'text-yellow-600', 'border-yellow-500');
+                            link.classList.add('border-transparent');
+                            if (link.getAttribute('href').substring(1) === entry.target.id) {
+                                link.classList.add('font-bold', 'text-yellow-600', 'border-yellow-500');
+                                link.classList.remove('border-transparent');
+                            }
+                        });
+                    }
+                });
+            }, { rootMargin: "-50% 0px -50% 0px" }); // Triggers when the section is in the middle of the viewport
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        }
+      });
+    </script>
+</body>
+</html>

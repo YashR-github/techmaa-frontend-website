@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en" class="side-nav-enabled">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply for a Role | TechMaa-AI</title>
+
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      }
+    </script>
+    <script src="assets/js/theme.js?v=3"></script>
+
+  <link rel="stylesheet" href="assets/css/sidebar.css?v=4" />
+  <script src="assets/js/sidebar.js?v=4" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      input.form-field:focus,
+      textarea.form-field:focus {
+        outline: none;
+        border-color: #fcd34d; /* Tailwind: border-cyan-300 */
+        box-shadow: 0 0 0 3px rgba(252, 211, 77, 0.5); /* Tailwind: ring-2 ring-yellow-300/50 */
+      }
+      input.form-field.error,
+      textarea.form-field.error {
+        border-color: #ef4444; /* Tailwind: border-red-500 */
+      }
+      .error-message {
+        color: #ef4444; /* Tailwind: text-red-500 */
+        font-size: 0.875rem; /* Tailwind: text-sm */
+        margin-top: 0.25rem; /* Tailwind: mt-1 */
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-200">
+<header class="bg-black text-white shadow-lg sticky top-0 z-50" style="display: none;">
+  <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="index.html" class="flex items-center space-x-2 text-2xl font-bold" aria-label="TechMaa-AI Home">
+      <img src="assets/img/new-techmaa-logo.png" alt="TechMaa-AI Logo" class="w-56 h-auto my-3" />
+    </a>
+
+    <ul class="hidden md:flex items-center space-x-6 text-gray-300">
+      <li><a href="index.html" class="hover:text-yellow-400 transition">Home</a></li>
+      <li><a href="about.html" class="hover:text-yellow-400 transition">About Us</a></li>
+      <li><a href="services.html" class="hover:text-yellow-400 transition">Services</a></li>
+      <li><a href="blog.html" class="hover:text-yellow-400 transition">Blog</a></li>
+      <li><a href="testimonials.html" class="hover:text-yellow-400 transition">Testimonials</a></li>
+      <li><a href="insights.html" class="hover:text-yellow-400 transition">Insights</a></li>
+      <li><a href="careers.html" class="hover:text-yellow-400 transition">Careers</a></li>
+      <li><a href="employes.html" class="hover:text-yellow-400 transition">Team</a></li>
+      <li><a href="contact.html" class="text-yellow-400 hover:text-yellow-300 font-semibold transition">Contact</a></li>
+    </ul>
+
+    <button id="mobile-menu-button" class="md:hidden focus:outline-none" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+  </nav>
+
+  <div id="mobile-menu-overlay" class="md:hidden fixed inset-0 bg-black bg-opacity-75 z-40 hidden"></div>
+  <div id="mobile-menu" class="md:hidden fixed top-0 right-0 w-64 h-full bg-gray-900 text-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+    <div class="p-6 flex justify-end">
+      <button id="close-mobile-menu" class="text-white focus:outline-none" aria-label="Close mobile menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <ul class="flex flex-col space-y-4 px-6 text-gray-300">
+      <li><a href="index.html" class="block py-2 hover:text-yellow-400 transition">Home</a></li>
+      <li><a href="about.html" class="block py-2 hover:text-yellow-400 transition">About Us</a></li>
+      <li><a href="services.html" class="block py-2 hover:text-yellow-400 transition">Services</a></li>
+      <li><a href="blog.html" class="block py-2 hover:text-yellow-400 transition">Blog</a></li>
+      <li><a href="testimonials.html" class="block py-2 hover:text-yellow-400 transition">Testimonials</a></li>
+      <li><a href="insights.html" class="block py-2 hover:text-yellow-400 transition">Insights</a></li>
+      <li><a href="careers.html" class="block py-2 hover:text-yellow-400 transition">Careers</a></li>
+      <li><a href="employes.html" class="block py-2 hover:text-yellow-400 transition">Team</a></li>
+      <li><a href="contact.html" class="block py-2 text-yellow-400 font-semibold">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+    <main class="py-16 md:py-24">
+      <section
+        class="max-w-3xl mx-auto bg-white p-8 sm:p-10 rounded-xl shadow-lg border border-gray-100"
+      >
+        <div id="form-container">
+          <div class="text-center mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900">
+              Apply for
+              <span id="jobTitle" class="text-cyan-500">Open Position</span>
+            </h1>
+            <p class="text-lg text-gray-600 mt-4">
+              Fill in your details below to apply. Fields marked with
+              <span class="text-red-500">*</span> are required.
+            </p>
+            <div class="mt-6 text-left">
+              <label class="block text-gray-700 font-medium mb-2"
+                >Completion</label
+              >
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div
+                  id="progressBar"
+                  class="bg-cyan-500 h-2.5 rounded-full transition-all duration-300"
+                  style="width: 0%"
+                ></div>
+              </div>
+              <p id="progressLabel" class="text-sm text-gray-500 mt-1">
+                0% complete
+              </p>
+            </div>
+          </div>
+
+          <form id="applyForm" class="space-y-6" novalidate>
+            <input type="hidden" id="jobRole" name="jobRole" />
+            <div>
+              <label for="fullName" class="block text-gray-700 font-medium mb-2"
+                >Full Name <span class="text-red-500">*</span></label
+              >
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                required
+                class="form-field w-full p-3 border border-gray-300 rounded-lg"
+              />
+              <p id="fullName-error" class="error-message hidden"></p>
+            </div>
+            <div>
+              <label for="email" class="block text-gray-700 font-medium mb-2"
+                >Email Address <span class="text-red-500">*</span></label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="form-field w-full p-3 border border-gray-300 rounded-lg"
+              />
+              <p id="email-error" class="error-message hidden"></p>
+            </div>
+            <div>
+              <label for="phone" class="block text-gray-700 font-medium mb-2"
+                >Phone Number</label
+              >
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+91 XXXXX XXXXX"
+                class="form-field w-full p-3 border border-gray-300 rounded-lg"
+              />
+            </div>
+            <div>
+              <span class="block text-gray-700 font-medium mb-2"
+                >Experience</span
+              >
+              <div class="flex items-center space-x-6">
+                <label class="inline-flex items-center space-x-2">
+                  <input
+                    type="radio"
+                    name="experienceLevel"
+                    id="expFresher"
+                    value="fresher"
+                    class="form-field"
+                    checked
+                  />
+                  <span>Fresher</span>
+                </label>
+                <label class="inline-flex items-center space-x-2">
+                  <input
+                    type="radio"
+                    name="experienceLevel"
+                    id="expExperienced"
+                    value="experienced"
+                    class="form-field"
+                  />
+                  <span>Experienced</span>
+                </label>
+              </div>
+              <p id="experienceLevel-error" class="error-message hidden"></p>
+            </div>
+            <div
+              id="experienceSection"
+              class="hidden border rounded-lg p-4 bg-gray-50"
+            >
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="experienceYears"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Years of Experience
+                    <span class="text-red-500">*</span></label
+                  >
+                  <input
+                    type="number"
+                    id="experienceYears"
+                    name="experienceYears"
+                    min="0.5"
+                    step="0.5"
+                    placeholder="e.g., 3"
+                    class="form-field w-full p-3 border border-gray-300 rounded-lg"
+                  />
+                  <p
+                    id="experienceYears-error"
+                    class="error-message hidden"
+                  ></p>
+                </div>
+                <div>
+                  <label
+                    for="currentTitle"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Most recent role/title
+                    <span class="text-red-500">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="currentTitle"
+                    name="currentTitle"
+                    placeholder="e.g., Frontend Developer"
+                    class="form-field w-full p-3 border border-gray-300 rounded-lg"
+                  />
+                  <p id="currentTitle-error" class="error-message hidden"></p>
+                </div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                <div>
+                  <label
+                    for="currentCompany"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Current/Last Company
+                    <span class="text-red-500">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="currentCompany"
+                    name="currentCompany"
+                    placeholder="e.g., TechMaa-AI"
+                    class="form-field w-full p-3 border border-gray-300 rounded-lg"
+                  />
+                  <p id="currentCompany-error" class="error-message hidden"></p>
+                </div>
+                <div>
+                  <label
+                    for="noticePeriod"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Notice Period</label
+                  >
+                  <select
+                    id="noticePeriod"
+                    name="noticePeriod"
+                    class="form-field w-full p-3 border border-gray-300 rounded-lg"
+                  >
+                    <option value="">Select</option>
+                    <option>Immediate</option>
+                    <option>15 days</option>
+                    <option>30 days</option>
+                    <option>60 days</option>
+                    <option>90 days</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mt-6">
+                <label for="skills" class="block text-gray-700 font-medium mb-2"
+                  >Key Skills</label
+                >
+                <textarea
+                  id="skills"
+                  name="skills"
+                  rows="3"
+                  placeholder="e.g., React, Tailwind, Node.js"
+                  class="form-field w-full p-3 border border-gray-300 rounded-lg resize-y"
+                ></textarea>
+              </div>
+              <div class="mt-6">
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-gray-900 font-medium">
+                    Additional Experience
+                  </h3>
+                  <button
+                    type="button"
+                    id="addExperienceBtn"
+                    class="inline-flex items-center bg-cyan-500 hover:bg-cyan-600 text-gray-900 text-sm font-semibold px-3 py-2 rounded-lg shadow transition"
+                  >
+                    <i class="fa-solid fa-plus mr-2"></i>
+                    Add another experience
+                  </button>
+                </div>
+                <p class="text-sm text-gray-500 mb-3">
+                  Add previous roles (optional).
+                </p>
+                <div id="experienceList" class="space-y-4"></div>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label
+                  for="linkedin"
+                  class="block text-gray-700 font-medium mb-2"
+                  >LinkedIn URL</label
+                >
+                <input
+                  type="url"
+                  id="linkedin"
+                  name="linkedin"
+                  placeholder="https://www.linkedin.com/in/username"
+                  class="form-field w-full p-3 border border-gray-300 rounded-lg"
+                />
+                <p id="linkedin-error" class="error-message hidden"></p>
+              </div>
+              <div>
+                <label
+                  for="portfolio"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Portfolio/Website</label
+                >
+                <input
+                  type="url"
+                  id="portfolio"
+                  name="portfolio"
+                  placeholder="https://your-portfolio.com"
+                  class="form-field w-full p-3 border border-gray-300 rounded-lg"
+                />
+                <p id="portfolio-error" class="error-message hidden"></p>
+              </div>
+            </div>
+            <div>
+              <label
+                for="availability"
+                class="block text-gray-700 font-medium mb-2"
+                >Availability Date <span class="text-red-500">*</span></label
+              >
+              <input
+                type="date"
+                id="availability"
+                name="availability"
+                required
+                class="form-field w-full p-3 border border-gray-300 rounded-lg"
+              />
+              <p id="availability-error" class="error-message hidden"></p>
+            </div>
+            <div class="mt-2">
+              <h2 class="text-xl font-semibold text-gray-900 mb-3">
+                Education
+              </h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="gradDegree"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Graduation Degree
+                    <span class="text-red-500">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="gradDegree"
+                    name="gradDegree"
+                    placeholder="e.g., B.Tech in CSE"
+                    class="form-field w-full p-3 border border-gray-300 rounded-lg"
+                  />
+                  <p id="gradDegree-error" class="error-message hidden"></p>
+                </div>
+                <div>
+                  <label
+                    for="gradInstitution"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Institution/University
+                    <span class="text-red-500">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="gradInstitution"
+                    name="gradInstitution"
+                    placeholder="e.g., IIT Delhi"
+                    class="form-field w-full p-3 border border-gray-300 rounded-lg"
+                  />
+                  <p
+                    id="gradInstitution-error"
+                    class="error-message hidden"
+                  ></p>
+                </div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                <div>
+                  <label
+                    for="gradYear"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Graduation Year <span class="text-red-500">*</span></label
+                  >
+                  <input
+                    type="number"
+                    id="gradYear"
+                    name="gradYear"
+                    min="1900"
+                    max="2099"
+                    step="1"
+                    placeholder="e.g., 2023"
+                    class="form-field w-full p-3 border border-gray-300 rounded-lg"
+                  />
+                  <p id="gradYear-error" class="error-message hidden"></p>
+                </div>
+                <div>
+                  <label
+                    for="gradGrade"
+                    class="block text-gray-700 font-medium mb-2"
+                    >CGPA/Percentage</label
+                  >
+                  <input
+                    type="text"
+                    id="gradGrade"
+                    name="gradGrade"
+                    placeholder="e.g., 8.2 CGPA or 78%"
+                    class="form-field w-full p-3 border border-gray-300 rounded-lg"
+                  />
+                </div>
+              </div>
+              <div class="mt-6">
+                <label class="inline-flex items-start space-x-3">
+                  <input
+                    type="checkbox"
+                    id="pgToggle"
+                    class="mt-1 form-field"
+                  />
+                  <span class="text-sm text-gray-700"
+                    >I have a postgraduation degree (add details)</span
+                  >
+                </label>
+              </div>
+              <div
+                id="postgradSection"
+                class="hidden mt-4 border rounded-lg p-4 bg-gray-50"
+              >
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label
+                      for="pgDegree"
+                      class="block text-gray-700 font-medium mb-2"
+                      >Postgraduation Degree
+                      <span class="text-red-500">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="pgDegree"
+                      name="pgDegree"
+                      placeholder="e.g., M.Tech in AI"
+                      class="form-field w-full p-3 border border-gray-300 rounded-lg"
+                    />
+                    <p id="pgDegree-error" class="error-message hidden"></p>
+                  </div>
+                  <div>
+                    <label
+                      for="pgInstitution"
+                      class="block text-gray-700 font-medium mb-2"
+                      >Institution/University
+                      <span class="text-red-500">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="pgInstitution"
+                      name="pgInstitution"
+                      placeholder="e.g., IISc Bengaluru"
+                      class="form-field w-full p-3 border border-gray-300 rounded-lg"
+                    />
+                    <p
+                      id="pgInstitution-error"
+                      class="error-message hidden"
+                    ></p>
+                  </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                  <div>
+                    <label
+                      for="pgYear"
+                      class="block text-gray-700 font-medium mb-2"
+                      >Postgraduation Year
+                      <span class="text-red-500">*</span></label
+                    >
+                    <input
+                      type="number"
+                      id="pgYear"
+                      name="pgYear"
+                      min="1900"
+                      max="2099"
+                      step="1"
+                      placeholder="e.g., 2025"
+                      class="form-field w-full p-3 border border-gray-300 rounded-lg"
+                    />
+                    <p id="pgYear-error" class="error-message hidden"></p>
+                  </div>
+                  <div>
+                    <label
+                      for="pgGrade"
+                      class="block text-gray-700 font-medium mb-2"
+                      >CGPA/Percentage</label
+                    >
+                    <input
+                      type="text"
+                      id="pgGrade"
+                      name="pgGrade"
+                      placeholder="e.g., 9.0 CGPA or 82%"
+                      class="form-field w-full p-3 border border-gray-300 rounded-lg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <label
+                for="coverLetter"
+                class="block text-gray-700 font-medium mb-2"
+                >Cover Letter <span class="text-red-500">*</span></label
+              >
+              <textarea
+                id="coverLetter"
+                name="coverLetter"
+                rows="6"
+                maxlength="2000"
+                required
+                class="form-field w-full p-3 border border-gray-300 rounded-lg resize-y"
+              ></textarea>
+              <div class="flex items-center justify-between mt-1">
+                <p id="coverLetter-error" class="error-message hidden"></p>
+                <p id="coverCounter" class="text-xs text-gray-500 ml-auto">
+                  0/2000
+                </p>
+              </div>
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2"
+                >Upload Resume <span class="text-red-500">*</span></label
+              >
+              <div
+                id="resumeDrop"
+                class="flex flex-col items-center justify-center w-full p-6 border-2 border-dashed border-gray-300 rounded-lg text-gray-600 hover:border-cyan-400 cursor-pointer transition"
+              >
+                <i class="fa-regular fa-file-lines text-3xl mb-2"></i>
+                <p class="text-sm">
+                  <span class="font-semibold">Click to upload</span> or drag and
+                  drop
+                </p>
+                <p class="text-xs text-gray-500 mt-1">
+                  PDF, DOC, DOCX (max 5MB)
+                </p>
+              </div>
+              <input
+                type="file"
+                id="resume"
+                name="resume"
+                required
+                accept=".pdf,.doc,.docx"
+                class="form-field hidden"
+              />
+              <div id="resumeInfo" class="mt-2 hidden text-sm text-gray-700">
+                <span id="resumeName" class="font-medium"></span>
+                <span id="resumeSize" class="ml-2 text-gray-500"></span>
+                <a
+                  id="resumePreview"
+                  href="#"
+                  target="_blank"
+                  class="ml-3 text-cyan-700 hover:underline hidden"
+                  >Preview</a
+                >
+                <button
+                  type="button"
+                  id="resumeRemove"
+                  class="ml-3 text-red-600 hover:underline"
+                >
+                  Remove
+                </button>
+              </div>
+              <p id="resume-error" class="error-message hidden"></p>
+            </div>
+            <div class="pt-2">
+              <label class="inline-flex items-start space-x-3">
+                <input
+                  type="checkbox"
+                  id="consent"
+                  class="mt-1 form-field"
+                  required
+                />
+                <span class="text-sm text-gray-700"
+                  >I consent to the processing of my personal data in accordance
+                  with the
+                  <a href="privacy.html" class="text-cyan-700 underline"
+                    >Privacy Policy</a
+                  >. <span class="text-red-500">*</span></span
+                >
+              </label>
+              <p id="consent-error" class="error-message hidden"></p>
+            </div>
+            <div>
+              <button
+                type="submit"
+                id="submitButton"
+                class="w-full bg-cyan-500 hover:bg-cyan-600 text-gray-900 font-bold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Submit Application
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div
+          id="applyMsg"
+          role="status"
+          class="text-center text-sm font-medium"
+        ></div>
+      </section>
+    </main>
+
+    <footer class="bg-black text-white">
+      <div class="container mx-auto px-6 pt-16 pb-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="col-span-1">
+            <a href="index.html">
+              <img
+                src="assets/img/new-techmaa-logo.png"
+                alt="TechMaa-AI Logo"
+                class="w-40 h-auto mb-4"
+              />
+            </a>
+            <p class="text-gray-400 text-sm">
+              Consulting & IT services to help you ship faster—with confidence.
+            </p>
+            <div class="mt-6 flex space-x-5">
+              <a
+                href="#"
+                aria-label="LinkedIn"
+                class="text-gray-400 hover:text-white transition"
+                ><i class="fab fa-linkedin fa-lg"></i
+              ></a>
+              <a
+                href="#"
+                aria-label="Twitter"
+                class="text-gray-400 hover:text-white transition"
+                ><i class="fab fa-twitter fa-lg"></i
+              ></a>
+              <a
+                href="#"
+                aria-label="GitHub"
+                class="text-gray-400 hover:text-white transition"
+                ><i class="fab fa-github fa-lg"></i
+              ></a>
+            </div>
+          </div>
+          <nav>
+            <h5 class="font-bold text-gray-200 mb-4">Company</h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="careers.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <nav>
+            <h5 class="font-bold text-gray-200 mb-4">Resources</h5>
+            <ul class="space-y-3">
+              <li><a href="insights.html" class="text-gray-400 hover:text-cyan-400 transition">Insights</a></li>
+              <li><a href="privacy.html" class="text-gray-400 hover:text-cyan-400 transition">Privacy Policy</a></li>
+              <li><a href="terms.html" class="text-gray-400 hover:text-cyan-400 transition">Terms of Service</a></li>
+              <li><a href="blog.html" class="text-gray-400 hover:text-cyan-400 transition">Blog</a></li>
+              <li><a href="about.html" class="text-gray-400 hover:text-cyan-400 transition">About Us</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h5 class="font-bold text-gray-200 mb-4">Get in touch</h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="mailto:hello@techmaa-ai.com"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >hello@techmaa-ai.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500"
+        >
+          <small
+            >&copy; <span id="year"></span> TechMaa-AI. All rights
+            reserved.</small
+          >
+
+          <p class="text-sm mt-4">
+            Please note: This is a demonstration website created as a generative
+            AI response. The official website for the company referenced is
+            <a
+              href="https://techmaa.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline text-gray-400 hover:text-cyan-500 transition"
+              >TechMaa | Enterprise IT Solutions & Digital Transformation</a
+            >.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("year").textContent = new Date().getFullYear();
+        const mobileMenuButton = document.getElementById("mobile-menu-button"),
+          closeMobileMenuButton = document.getElementById("close-mobile-menu"),
+          mobileMenu = document.getElementById("mobile-menu"),
+          mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
+        const toggleMobileMenu = () => {
+          const isOpen = mobileMenu.classList.contains("translate-x-full");
+          mobileMenu.classList.toggle("translate-x-full", !isOpen);
+          mobileMenuOverlay.classList.toggle("hidden", !isOpen);
+          document.body.classList.toggle("overflow-hidden", isOpen);
+        };
+        mobileMenuButton.addEventListener("click", toggleMobileMenu);
+        closeMobileMenuButton.addEventListener("click", toggleMobileMenu);
+        mobileMenuOverlay.addEventListener("click", toggleMobileMenu);
+
+        const applyForm = document.getElementById("applyForm");
+        if (applyForm) {
+          const params = new URLSearchParams(window.location.search);
+          const role = params.get("role");
+          const jobTitleElement = document.getElementById("jobTitle");
+          if (role) {
+            const decodedRole = decodeURIComponent(role.replace(/\+/g, " "));
+            jobTitleElement.textContent = decodedRole;
+            document.getElementById("jobRole").value = decodedRole;
+          } else {
+            jobTitleElement.textContent = "Open Position";
+            document.getElementById("jobRole").value = "Open Position";
+          }
+
+          const msgElement = document.getElementById("applyMsg");
+          const submitButton = document.getElementById("submitButton");
+          const formContainer = document.getElementById("form-container");
+          const progressBar = document.getElementById("progressBar");
+          const progressLabel = document.getElementById("progressLabel");
+          const pgToggle = document.getElementById("pgToggle");
+          const postgradSection = document.getElementById("postgradSection");
+          const coverLetterEl = document.getElementById("coverLetter");
+          const coverCounter = document.getElementById("coverCounter");
+          const resumeInput = document.getElementById("resume");
+          const resumeDrop = document.getElementById("resumeDrop");
+          const resumeInfo = document.getElementById("resumeInfo");
+          const resumeName = document.getElementById("resumeName");
+          const resumeSize = document.getElementById("resumeSize");
+          const resumePreview = document.getElementById("resumePreview");
+          const resumeRemove = document.getElementById("resumeRemove");
+          const addExperienceBtn = document.getElementById("addExperienceBtn");
+          const experienceList = document.getElementById("experienceList");
+
+          // --- Autosave to localStorage ---
+          const storageKey = "tmai_apply_form";
+          const saveFields = [
+            "fullName",
+            "email",
+            "phone",
+            "linkedin",
+            "portfolio",
+            "availability",
+            "coverLetter",
+            "gradDegree",
+            "gradInstitution",
+            "gradYear",
+            "gradGrade",
+            "pgDegree",
+            "pgInstitution",
+            "pgYear",
+            "pgGrade",
+          ];
+          const restore = () => {
+            try {
+              const raw = localStorage.getItem(storageKey);
+              if (!raw) return;
+              const data = JSON.parse(raw);
+              saveFields.forEach((k) => {
+                const el = document.getElementById(k);
+                if (el && typeof data[k] !== "undefined") {
+                  el.value = data[k];
+                }
+              });
+              if (data.experiences && Array.isArray(data.experiences)) {
+                data.experiences.forEach((exp) => addExperience(exp));
+              }
+              updateProgress();
+              if (coverCounter) {
+                coverCounter.textContent = `${coverLetterEl.value.length}/2000`;
+              }
+            } catch {}
+          };
+          const scheduleSave = () => {
+            const data = {};
+            saveFields.forEach((k) => {
+              const el = document.getElementById(k);
+              if (el) {
+                data[k] = el.value;
+              }
+            });
+            // Save dynamic experiences
+            const exps = [];
+            if (experienceList) {
+              experienceList
+                .querySelectorAll("[data-exp-item]")
+                .forEach((item) => {
+                  exps.push({
+                    title: item.querySelector("[data-exp-title]")?.value || "",
+                    company:
+                      item.querySelector("[data-exp-company]")?.value || "",
+                    from: item.querySelector("[data-exp-from]")?.value || "",
+                    to: item.querySelector("[data-exp-to]")?.value || "",
+                    description:
+                      item.querySelector("[data-exp-desc]")?.value || "",
+                  });
+                });
+            }
+            data.experiences = exps;
+            localStorage.setItem(storageKey, JSON.stringify(data));
+          };
+          applyForm.addEventListener("input", scheduleSave);
+          restore();
+
+          // --- Cover letter live counter ---
+          if (coverLetterEl && coverCounter) {
+            coverLetterEl.addEventListener("input", () => {
+              coverCounter.textContent = `${coverLetterEl.value.length}/2000`;
+            });
+          }
+
+          // --- Drag-and-drop resume ---
+          const handleFiles = (files) => {
+            if (!files || files.length === 0) return;
+            const file = files[0];
+            resumeInput.files = files;
+            resumeInfo.classList.remove("hidden");
+            resumeName.textContent = file.name;
+            resumeSize.textContent = `(${(file.size / 1024 / 1024).toFixed(
+              2
+            )} MB)`;
+            // Preview only for PDFs
+            if (file.type === "application/pdf") {
+              const url = URL.createObjectURL(file);
+              resumePreview.href = url;
+              resumePreview.classList.remove("hidden");
+            } else {
+              resumePreview.classList.add("hidden");
+            }
+          };
+          if (resumeDrop) {
+            resumeDrop.addEventListener("click", () => resumeInput.click());
+            resumeDrop.addEventListener("dragover", (e) => {
+              e.preventDefault();
+              resumeDrop.classList.add("border-cyan-400");
+            });
+            resumeDrop.addEventListener("dragleave", () =>
+              resumeDrop.classList.remove("border-cyan-400")
+            );
+            resumeDrop.addEventListener("drop", (e) => {
+              e.preventDefault();
+              resumeDrop.classList.remove("border-cyan-400");
+              handleFiles(e.dataTransfer.files);
+            });
+          }
+          if (resumeInput) {
+            resumeInput.addEventListener("change", (e) =>
+              handleFiles(e.target.files)
+            );
+          }
+          if (resumeRemove) {
+            resumeRemove.addEventListener("click", () => {
+              applyForm.reset();
+              resumeInfo.classList.add("hidden");
+              resumePreview.classList.add("hidden");
+              updateProgress();
+              scheduleSave();
+            });
+          }
+
+          // --- Progress ---
+          function updateProgress() {
+            const requiredFields = [
+              "fullName",
+              "email",
+              "coverLetter",
+              "resume",
+              "availability",
+              "consent",
+              "gradDegree",
+              "gradInstitution",
+              "gradYear",
+            ];
+            if (
+              postgradSection &&
+              !postgradSection.classList.contains("hidden")
+            ) {
+              requiredFields.push("pgDegree", "pgInstitution", "pgYear");
+            }
+            let filled = 0;
+            requiredFields.forEach((id) => {
+              const el = document.getElementById(id);
+              if (!el) return;
+              if (el.type === "file") {
+                if (el.files && el.files.length > 0) filled++;
+              } else if (el.type === "checkbox") {
+                if (el.checked) filled++;
+              } else if (el.value && el.value.trim()) {
+                filled++;
+              }
+            });
+            const pct = Math.round((filled / requiredFields.length) * 100);
+            if (progressBar) progressBar.style.width = pct + "%";
+            if (progressLabel) progressLabel.textContent = `${pct}% complete`;
+          }
+          applyForm.addEventListener("input", updateProgress);
+          applyForm.addEventListener("change", updateProgress);
+          updateProgress();
+
+          // Toggle Postgraduation section
+          if (pgToggle && postgradSection) {
+            pgToggle.addEventListener("change", () => {
+              postgradSection.classList.toggle("hidden", !pgToggle.checked);
+              updateProgress();
+            });
+          }
+
+          // Dynamic additional experience blocks
+          function addExperience(prefill = {}) {
+            const wrapper = document.createElement("div");
+            wrapper.setAttribute("data-exp-item", "");
+            wrapper.className = "border rounded-lg p-4 bg-white shadow-sm";
+            wrapper.innerHTML = `
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-gray-700 text-sm mb-1">Role/Title</label>
+                                <input type="text" data-exp-title class="form-field w-full p-3 border border-gray-300 rounded-lg" placeholder="e.g., Software Engineer" value="${
+                                  prefill.title || ""
+                                }">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm mb-1">Company</label>
+                                <input type="text" data-exp-company class="form-field w-full p-3 border border-gray-300 rounded-lg" placeholder="e.g., Acme Corp" value="${
+                                  prefill.company || ""
+                                }">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                            <div>
+                                <label class="block text-gray-700 text-sm mb-1">From</label>
+                                <input type="month" data-exp-from class="form-field w-full p-3 border border-gray-300 rounded-lg" value="${
+                                  prefill.from || ""
+                                }">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm mb-1">To</label>
+                                <input type="month" data-exp-to class="form-field w-full p-3 border border-gray-300 rounded-lg" value="${
+                                  prefill.to || ""
+                                }">
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <label class="block text-gray-700 text-sm mb-1">Description</label>
+                            <textarea rows="3" data-exp-desc class="form-field w-full p-3 border border-gray-300 rounded-lg" placeholder="Briefly describe your responsibilities">${
+                              prefill.description || ""
+                            }</textarea>
+                        </div>
+                        <div class="mt-3 text-right">
+                            <button type="button" class="text-red-600 hover:underline" data-exp-remove>Remove</button>
+                        </div>
+                    `;
+            experienceList.appendChild(wrapper);
+            wrapper.addEventListener("input", scheduleSave);
+            wrapper
+              .querySelector("[data-exp-remove]")
+              .addEventListener("click", () => {
+                wrapper.remove();
+                scheduleSave();
+              });
+          }
+          if (addExperienceBtn && experienceList) {
+            addExperienceBtn.addEventListener("click", () => addExperience());
+          }
+
+          // Toggle Experience Section
+          const expFresher = document.getElementById("expFresher");
+          const expExperienced = document.getElementById("expExperienced");
+          const experienceSection =
+            document.getElementById("experienceSection");
+          const toggleExperience = () => {
+            if (expExperienced && expExperienced.checked)
+              experienceSection.classList.remove("hidden");
+            else experienceSection.classList.add("hidden");
+            updateProgress();
+          };
+          [expFresher, expExperienced].forEach(
+            (el) => el && el.addEventListener("change", toggleExperience)
+          );
+          toggleExperience();
+
+          applyForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            let isValid = true;
+            clearAllErrors();
+            // --- (Your existing validation logic goes here...) ---
+            const fullName = document.getElementById("fullName");
+            if (!fullName.value.trim()) {
+              displayError("fullName", "Full Name is required.");
+              isValid = false;
+            }
+            const email = document.getElementById("email");
+            if (!email.value.trim()) {
+              displayError("email", "Email Address is required.");
+              isValid = false;
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+              displayError("email", "Please enter a valid email address.");
+              isValid = false;
+            }
+            const availability = document.getElementById("availability");
+            if (!availability.value) {
+              displayError(
+                "availability",
+                "Please select your availability date."
+              );
+              isValid = false;
+            }
+            const linkedin = document.getElementById("linkedin");
+            if (linkedin.value && !/^https?:\/\//i.test(linkedin.value)) {
+              displayError(
+                "linkedin",
+                "Please enter a valid URL starting with http or https."
+              );
+              isValid = false;
+            }
+            const portfolio = document.getElementById("portfolio");
+            if (portfolio.value && !/^https?:\/\//i.test(portfolio.value)) {
+              displayError(
+                "portfolio",
+                "Please enter a valid URL starting with http or https."
+              );
+              isValid = false;
+            }
+            const coverLetter = document.getElementById("coverLetter");
+            if (!coverLetter.value.trim()) {
+              displayError("coverLetter", "Cover Letter is required.");
+              isValid = false;
+            }
+            if (expExperienced && expExperienced.checked) {
+              const experienceYears =
+                document.getElementById("experienceYears");
+              if (!experienceYears.value) {
+                displayError(
+                  "experienceYears",
+                  "Please provide total experience."
+                );
+                isValid = false;
+              }
+              const currentTitle = document.getElementById("currentTitle");
+              if (!currentTitle.value.trim()) {
+                displayError("currentTitle", "Please enter your role/title.");
+                isValid = false;
+              }
+              const currentCompany = document.getElementById("currentCompany");
+              if (!currentCompany.value.trim()) {
+                displayError("currentCompany", "Please enter your company.");
+                isValid = false;
+              }
+            }
+            // Education validation
+            const gradDegree = document.getElementById("gradDegree");
+            if (!gradDegree.value.trim()) {
+              displayError("gradDegree", "Graduation degree is required.");
+              isValid = false;
+            }
+            const gradInstitution = document.getElementById("gradInstitution");
+            if (!gradInstitution.value.trim()) {
+              displayError("gradInstitution", "Institution is required.");
+              isValid = false;
+            }
+            const gradYear = document.getElementById("gradYear");
+            if (!gradYear.value) {
+              displayError("gradYear", "Graduation year is required.");
+              isValid = false;
+            }
+            if (pgToggle && pgToggle.checked) {
+              const pgDegree = document.getElementById("pgDegree");
+              if (!pgDegree.value.trim()) {
+                displayError("pgDegree", "Postgraduation degree is required.");
+                isValid = false;
+              }
+              const pgInstitution = document.getElementById("pgInstitution");
+              if (!pgInstitution.value.trim()) {
+                displayError("pgInstitution", "Institution is required.");
+                isValid = false;
+              }
+              const pgYear = document.getElementById("pgYear");
+              if (!pgYear.value) {
+                displayError("pgYear", "Postgraduation year is required.");
+                isValid = false;
+              }
+            }
+            const consent = document.getElementById("consent");
+            if (!consent.checked) {
+              displayError(
+                "consent",
+                "You must consent to our privacy policy to proceed."
+              );
+              isValid = false;
+            }
+            const resume = document.getElementById("resume");
+            if (resume.files.length === 0) {
+              displayError("resume", "Please upload your resume.");
+              isValid = false;
+            } else {
+              const file = resume.files[0];
+              const allowedTypes = [
+                "application/pdf",
+                "application/msword",
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              ];
+              if (!allowedTypes.includes(file.type)) {
+                displayError(
+                  "resume",
+                  "Invalid file type. Please upload PDF or DOC/DOCX."
+                );
+                isValid = false;
+              }
+              if (file.size > 5 * 1024 * 1024) {
+                displayError("resume", "File size exceeds 5MB limit.");
+                isValid = false;
+              }
+            }
+            if (!isValid) return;
+
+            submitButton.disabled = true;
+            submitButton.innerHTML = `<i class="fas fa-spinner fa-spin mr-2"></i> Submitting...`;
+
+            try {
+              const API_BASE_URL = "http://localhost:4000/api/public";
+              const response = await fetch(`${API_BASE_URL}/apply`, {
+                method: "POST",
+                body: new FormData(applyForm),
+              });
+              const data = await response.json().catch(() => ({}));
+              if (!response.ok) {
+                throw new Error(data.message || "Error submitting application. Please try again.");
+              }
+
+              // Clear autosave after successful submission
+              try {
+                localStorage.removeItem(storageKey);
+              } catch {}
+
+              formContainer.innerHTML = "";
+              msgElement.innerHTML = `
+                            <div class="bg-green-50 text-green-800 p-8 rounded-lg text-center border border-green-200">
+                                <h3 class="font-bold text-2xl">Thank You!</h3>
+                                <p class="mt-2">${data.message}</p>
+                                <div class="mt-6">
+                                    <p class="text-sm">Your Application ID is:</p>
+                                    <p class="text-xl font-mono bg-green-100 py-2 px-4 rounded-md inline-block mt-1">${data.applicationId}</p>
+                                    <p class="mt-4 text-sm text-gray-600">Please save this ID to check your application status.</p>
+                                </div>
+                                <a href="status.html" class="inline-block mt-6 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition">Check Status Now</a>
+                            </div>
+                        `;
+            } catch (error) {
+              msgElement.textContent =
+                error.message ||
+                "Error submitting application. Please try again.";
+              msgElement.className =
+                "text-center text-sm font-medium text-red-500 mt-4";
+              submitButton.disabled = false;
+              submitButton.textContent = "Submit Application";
+            }
+          });
+        }
+
+        function displayError(field, message) {
+          const errorElement = document.getElementById(`${field}-error`);
+          const inputElement = document.getElementById(field);
+          if (errorElement) {
+            errorElement.textContent = message;
+            errorElement.classList.remove("hidden");
+          }
+          if (inputElement) {
+            inputElement.classList.add("error");
+          }
+        }
+
+        function clearAllErrors() {
+          document.querySelectorAll(".error-message").forEach((el) => {
+            el.classList.add("hidden");
+            el.textContent = "";
+          });
+          document
+            .querySelectorAll(".form-field.error")
+            .forEach((el) => el.classList.remove("error"));
+        }
+      });
+    </script>
+  </body>
+</html>

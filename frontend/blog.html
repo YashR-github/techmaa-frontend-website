@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en" class="side-nav-enabled">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internships & Early Careers | TechMaa-AI</title>
+    <meta
+      name="description"
+      content="Launch your career in tech. Explore internship opportunities and learn about life as an intern at TechMaa-AI."
+    />
+
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+  <link rel="stylesheet" href="assets/css/sidebar.css?v=4" />
+  <script src="assets/js/sidebar.js?v=4" defer></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .faq-question {
+        transition: background-color 0.2s ease-in-out;
+      }
+      .faq-question i {
+        transition: transform 0.3s ease-in-out;
+      }
+      .faq-question.open i {
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-200">
+    <main>
+      <section class="bg-white dark:bg-gray-800 py-16 md:py-24">
+        <div class="container mx-auto px-6 text-center">
+          <h1
+            class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight"
+            data-aos="fade-up"
+          >
+            Launch Your Career in
+            <span
+              class="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent"
+              >Tech</span
+            >
+          </h1>
+          <p
+            class="text-lg text-gray-700 dark:text-gray-200 mt-6 max-w-3xl mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            Our internship program is your gateway to solving real-world
+            challenges. Work with cutting-edge AI, learn from industry experts,
+            and build a foundation for an extraordinary career.
+          </p>
+        </div>
+      </section>
+
+      <section class="py-16 md:py-24 bg-gray-100 dark:bg-gray-700 transition-colors duration-200">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-50">
+              Current Openings & Intern Stories
+            </h2>
+            <p class="text-lg text-gray-700 dark:text-gray-200 mt-4 max-w-2xl mx-auto">
+              Explore available roles and read about the experiences of our past
+              interns.
+            </p>
+          </div>
+
+          <div
+            id="content-grid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            <p class="text-gray-500 dark:text-gray-300 col-span-full text-center">
+              Loading content...
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="text-3xl sm:text-4xl font-bold">
+              Why Intern at TechMaa-AI?
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+              <div
+                class="bg-yellow-500 text-gray-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-rocket text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Work on Real Projects</h3>
+              <p class="text-gray-300">
+                Contribute to live projects that have a real impact on our
+                clients and our company. No coffee runs here.
+              </p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+              <div
+                class="bg-yellow-500 text-gray-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-users text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Mentorship from Experts</h3>
+              <p class="text-gray-300">
+                You'll be paired with an experienced mentor who will guide you,
+                challenge you, and support your growth.
+              </p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+              <div
+                class="bg-yellow-500 text-gray-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-chart-line text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">A Path to Full-Time</h3>
+              <p class="text-gray-300">
+                Our internship is a direct pipeline for talent. Exceptional
+                interns often receive full-time offers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 md:py-24">
+        <div class="container mx-auto px-6 max-w-4xl">
+          <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-50">
+              Frequently Asked Questions
+            </h2>
+          </div>
+            <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+            <!-- Question 1 -->
+            <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+              <h2>
+                <button
+                  type="button"
+                  class="faq-question flex items-center justify-between w-full p-6 font-semibold text-left text-gray-800 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
+                >
+                  <span>Who is eligible for the internship program?</span>
+                  <i class="fas fa-chevron-down text-gray-500 dark:text-gray-300"></i>
+                </button>
+              </h2>
+              <div
+                class="faq-answer p-6 border-t border-gray-200 dark:border-gray-700 hidden transition-all duration-300"
+              >
+                <p class="text-gray-600 dark:text-gray-200 leading-relaxed">
+                  Our internship program is open to students in their pre-final or final year of Bachelor's, Master's, or PhD programs, as well as working professionals, individuals with career gaps, and those looking to start or restart their career in tech. We look for strong programming fundamentals, problem-solving skills, and a genuine passion for technology.
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+              <h2>
+                <button
+                  type="button"
+                  class="faq-question flex items-center justify-between w-full p-6 font-semibold text-left text-gray-800 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
+                >
+                  <span>What is the duration of the internship?</span>
+                  <i class="fas fa-chevron-down text-gray-500 dark:text-gray-300"></i>
+                </button>
+              </h2>
+              <div
+                class="faq-answer p-6 border-t border-gray-200 dark:border-gray-700 hidden transition-all duration-300"
+              >
+                <p class="text-gray-600 dark:text-gray-200 leading-relaxed">
+                  Internships typically range from 3 to 6 months, with both summer (May-August) and winter (December-March) batches available. We align start and end dates with your academic calendar to ensure minimal disruption to your studies.
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+              <h2>
+                <button
+                  type="button"
+                  class="faq-question flex items-center justify-between w-full p-6 font-semibold text-left text-gray-800 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
+                >
+                  <span>Are the internships paid?</span>
+                  <i class="fas fa-chevron-down text-gray-500 dark:text-gray-300"></i>
+                </button>
+              </h2>
+              <div
+                class="faq-answer p-6 border-t border-gray-200 dark:border-gray-700 hidden transition-all duration-300"
+              >
+                <p class="text-gray-600 dark:text-gray-200 leading-relaxed">
+                  Our internships are not stipend-based but offer valuable training, hands-on experience with industry projects, and exposure to real-world skills. Interns gain access to learning resources, mentorship from experienced professionals, placement assistance, and the opportunity to build a strong foundation for their tech careers.
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+              <h2>
+                <button
+                  type="button"
+                  class="faq-question flex items-center justify-between w-full p-6 font-semibold text-left text-gray-800 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
+                >
+                  <span
+                    >Do you offer full-time positions (PPO) to interns?</span
+                  >
+                  <i class="fas fa-chevron-down text-gray-500 dark:text-gray-300"></i>
+                </button>
+              </h2>
+              <div
+                class="faq-answer p-6 border-t border-gray-200 dark:border-gray-700 hidden transition-all duration-300"
+              >
+                <p class="text-gray-600 dark:text-gray-200 leading-relaxed">
+                  Yes, our internship program is a primary talent pipeline for full-time positions. High-performing interns who demonstrate strong technical skills, cultural fit, and initiative are given priority consideration for Pre-Placement Offers (PPO) before internship completion.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black text-white">
+      <div class="container mx-auto px-6 pt-16 pb-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="col-span-1">
+            <a href="index.html">
+              <img
+                src="assets/img/new-techmaa-logo.png"
+                alt="TechMaa-AI Logo"
+                class="w-28 h-auto mb-6"
+              />
+            </a>
+            <p class="text-gray-400 text-sm">
+              Consulting & IT services to help you ship faster—with confidence.
+            </p>
+            <div class="mt-6 flex space-x-5">
+              <a
+                href="#"
+                aria-label="LinkedIn"
+                class="text-gray-400 hover:text-white transition"
+                ><i class="fab fa-linkedin fa-lg"></i
+              ></a>
+              <a
+                href="#"
+                aria-label="Twitter"
+                class="text-gray-400 hover:text-white transition"
+                ><i class="fab fa-twitter fa-lg"></i
+              ></a>
+              <a
+                href="#"
+                aria-label="GitHub"
+                class="text-gray-400 hover:text-white transition"
+                ><i class="fab fa-github fa-lg"></i
+              ></a>
+            </div>
+          </div>
+          <nav>
+            <h5 class="font-bold text-gray-200 mb-4">Company</h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="careers.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <nav>
+            <h5 class="font-bold text-gray-200 mb-4">Resources</h5>
+            <ul class="space-y-3">
+              <li><a href="insights.html" class="text-gray-400 hover:text-cyan-400 transition">Insights</a></li>
+              <li><a href="privacy.html" class="text-gray-400 hover:text-cyan-400 transition">Privacy Policy</a></li>
+              <li><a href="terms.html" class="text-gray-400 hover:text-cyan-400 transition">Terms of Service</a></li>
+              <li><a href="blog.html" class="text-gray-400 hover:text-cyan-400 transition">Blog</a></li>
+              <li><a href="about.html" class="text-gray-400 hover:text-cyan-400 transition">About Us</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h5 class="font-bold text-gray-200 mb-4">Get in touch</h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="mailto:hello@techmaa-ai.com"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >hello@techmaa-ai.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 dark:text-gray-300"
+        >
+          <small
+            >&copy; <span id="year"></span> TechMaa-AI. All rights
+            reserved.</small
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/theme.js?v=3"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        AOS.init({ duration: 800, once: true, offset: 50 });
+
+        // --- DYNAMIC CONTENT DATA ---
+        const contentData = [
+          {
+            type: "internship",
+            title: "AI/ML Research Intern",
+            location: "Remote",
+            duration: "6 Months",
+            description:
+              "Work alongside our data science team on cutting-edge machine learning models and contribute to real research projects.",
+          },
+          {
+            type: "story",
+            title: "From Intern to Full-Time AI Engineer",
+            category: "INTERN STORY",
+            image:
+              "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1974&auto=format&fit=crop",
+            alt: "A group of interns collaborating on a project",
+            excerpt:
+              "Read about Rohan's journey from a summer intern to a key member of our AI development team, and the impactful projects he worked on.",
+            author: "Rohan Mehta",
+            date: "July 15, 2025",
+          },
+          {
+            type: "internship",
+            title: "Cloud DevOps Intern",
+            location: "Bangalore",
+            duration: "3 Months",
+            description:
+              "Help build and maintain our cloud infrastructure. Get hands-on experience with AWS, Docker, and Kubernetes.",
+          },
+          {
+            type: "story",
+            title: "A Day in the Life of a TechMaa-AI Intern",
+            category: "CULTURE & LIFE",
+            image:
+              "https://images.unsplash.com/photo-1572021335469-31706a17aaef?q=80&w=2070&auto=format&fit=crop",
+            alt: "A modern office with people collaborating",
+            excerpt:
+              "Ever wonder what it's really like? Follow along for a typical day, from our morning stand-up meetings to our weekly innovation sessions.",
+            author: "Anika Reddy",
+            date: "August 01, 2025",
+          },
+          {
+            type: "internship",
+            title: "Frontend Engineering Intern",
+            location: "Hybrid",
+            duration: "6 Months",
+            description:
+              "Join our frontend team to build beautiful and responsive user interfaces for our AI-powered applications using React and TypeScript.",
+          },
+          {
+            type: "story",
+            title: "5 Skills I Learned During My Cloud Internship",
+            category: "INTERN STORY",
+            image:
+              "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1934&auto=format&fit=crop",
+            alt: "Cloud infrastructure diagram on a screen",
+            excerpt:
+              "Kavya shares the top 5 technical and soft skills she developed while working with our cloud solutions team.",
+            author: "Kavya Rao",
+            date: "June 28, 2025",
+          },
+          {
+            type: "internship",
+            title: "Product Management Intern",
+            location: "Mumbai",
+            duration: "4 Months",
+            description:
+              "Work with our product teams to define roadmaps, conduct user research, and help shape the future of our AI-driven products.",
+          },
+          {
+            type: "story",
+            title: "How to Ace Your Technical Interview for an Internship",
+            category: "CAREER ADVICE",
+            image:
+              "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop",
+            alt: "A person presenting in a meeting room",
+            excerpt:
+              "Our senior engineers share their top tips on preparing for technical interviews, from data structures to system design questions.",
+            author: "Vikram Joshi",
+            date: "May 12, 2025",
+          },
+        ];
+
+        // --- DYNAMIC RENDERING LOGIC ---
+        const contentGrid = document.getElementById("content-grid");
+        if (contentGrid) {
+          let contentHTML = "";
+          contentData.forEach((item, index) => {
+            const aosDelay = index * 100;
+            if (item.type === "internship") {
+              contentHTML += `
+                        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="${aosDelay}">
+                          <div class="p-6 flex flex-col flex-grow">
+                            <p class="text-sm text-blue-600 font-semibold mb-2">INTERNSHIP OPENING</p>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-gray-50 mb-3">${item.title}</h3>
+                            <div class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-gray-600 dark:text-gray-200 mb-4">
+                                <span><i class="fas fa-map-marker-alt mr-1 text-gray-400"></i>${item.location}</span>
+                                <span><i class="fas fa-clock mr-1 text-gray-400"></i>${item.duration}</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-200 mb-4 flex-grow">${item.description}</p>
+                            <div class="mt-auto">
+                                <a href="careers.html" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-2 px-4 rounded-lg transition-all duration-300 text-sm">
+                                    Learn More & Apply
+                                </a>
+                            </div>
+                          </div>
+                        </div>
+                    `;
+            } else if (item.type === "story") {
+              contentHTML += `
+                        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="${aosDelay}">
+                          <a href="blog-post.html" class="block"><img src="${item.image}" alt="${item.alt}" class="w-full h-48 object-cover"></a>
+                          <div class="p-6 flex flex-col flex-grow">
+                              <p class="text-sm text-cyan-600 font-semibold mb-2">${item.category}</p>
+                              <h3 class="text-xl font-bold text-gray-900 dark:text-gray-50 mb-3"><a href="blog-post.html" class="hover:text-cyan-500">${item.title}</a></h3>
+                              <p class="text-gray-600 dark:text-gray-200 mb-4 flex-grow">${item.excerpt}</p>
+                              <div class="mt-auto text-sm text-gray-500 dark:text-gray-300"><span>By ${item.author} on ${item.date}</span></div>
+                          </div>
+                        </div>
+                    `;
+            }
+          });
+          contentGrid.innerHTML = contentHTML;
+        }
+
+        // --- STANDARD PAGE LOGIC ---
+        // Mobile Menu Logic (only if elements exist)
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const closeMobileMenuButton =
+          document.getElementById("close-mobile-menu");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const mobileMenuOverlay = document.getElementById(
+          "mobile-menu-overlay"
+        );
+        
+        if (mobileMenuButton && closeMobileMenuButton && mobileMenu && mobileMenuOverlay) {
+          const toggleMobileMenu = () => {
+            const isOpen = !mobileMenu.classList.contains("translate-x-full");
+            mobileMenu.classList.toggle("translate-x-full", isOpen);
+            mobileMenuOverlay.classList.toggle("hidden", isOpen);
+            document.body.classList.toggle("overflow-hidden", !isOpen);
+          };
+          mobileMenuButton.addEventListener("click", toggleMobileMenu);
+          closeMobileMenuButton.addEventListener("click", toggleMobileMenu);
+          mobileMenuOverlay.addEventListener("click", toggleMobileMenu);
+        }
+
+        // FAQ Accordion Logic
+        const faqQuestions = document.querySelectorAll(".faq-question");
+        faqQuestions.forEach((question) => {
+          question.addEventListener("click", () => {
+            const answer = question.parentElement.nextElementSibling;
+
+            // Close any other opened FAQ
+            document.querySelectorAll(".faq-question.open").forEach((openQ) => {
+              if (openQ !== question) {
+                openQ.classList.remove("open");
+                openQ.parentElement.nextElementSibling.classList.add("hidden");
+              }
+            });
+
+            // Toggle the clicked one
+            const isOpen = question.classList.contains("open");
+            if (isOpen) {
+              question.classList.remove("open");
+              answer.classList.add("hidden");
+            } else {
+              question.classList.add("open");
+              answer.classList.remove("hidden");
+            }
+          });
+        });
+
+        document.getElementById("year").textContent = new Date().getFullYear();
+      });
+    </script>
+  </body>
+</html>
