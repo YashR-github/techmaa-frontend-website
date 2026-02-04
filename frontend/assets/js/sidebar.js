@@ -142,12 +142,21 @@
     navRail.addEventListener("focusin", expandNow);
     navRail.addEventListener("focusout", scheduleCollapse);
 
-    navRailToggle.addEventListener("click", (e) => {
+    // Use both click and touchstart for better mobile responsiveness
+    const handleToggle = (e) => {
       e.preventDefault();
+      e.stopPropagation();
       const isCollapsed = navRail.classList.contains("is-collapsed");
       setCollapsed(!isCollapsed);
       if (!isCollapsed) scheduleCollapse();
-    });
+    };
+    
+    navRailToggle.addEventListener("click", handleToggle);
+    // Add touchstart for immediate response on touch devices
+    navRailToggle.addEventListener("touchstart", (e) => {
+      e.preventDefault();
+      handleToggle(e);
+    }, { passive: false });
 
     window.addEventListener("mousemove", (e) => {
       if (e.clientX <= 10) expandNow();
